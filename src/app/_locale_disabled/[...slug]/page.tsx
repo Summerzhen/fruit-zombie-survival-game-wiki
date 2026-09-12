@@ -208,7 +208,7 @@ async function NavigationPage({
     <main className="mx-auto max-w-[88rem] px-4 py-12 sm:px-6 lg:px-8">
       <JsonLd data={listData} />
       <div className="grid gap-9 xl:grid-cols-[minmax(0,1fr)_232px]">
-        <article>
+        <article data-primary-task={contentType}>
           <Breadcrumbs
             items={[
               { label: messages.shared.home, href: localizeHref("/", locale) },
@@ -222,7 +222,7 @@ async function NavigationPage({
             {sectionTitle}
           </h1>
           {sectionDesc && (
-            <p className="mt-5 max-w-3xl text-lg leading-8 text-muted-foreground">
+            <p className="mt-5 max-w-3xl text-lg leading-8 text-muted-foreground" data-quick-answer>
               {sectionDesc}
             </p>
           )}
@@ -319,7 +319,7 @@ async function DetailPage({
       <JsonLd data={articleData} />
       <JsonLd data={breadcrumbData} />
       <div className="grid gap-9 xl:grid-cols-[minmax(0,1fr)_232px]">
-        <article>
+        <article data-primary-task={contentType}>
           <Breadcrumbs
             items={[
               { label: messages.shared.home, href: localizeHref("/", locale) },
