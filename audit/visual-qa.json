@@ -1,0 +1,66 @@
+{
+  "approved": true,
+  "method": "google-chrome-stable headless against local static out server",
+  "screenshots": [
+    {
+      "route": "/",
+      "width": 1440,
+      "height": 900,
+      "file": "audit/screenshots/home-1440.png",
+      "sha256": "1bc4d7df23db695a11e97e00da404b79c9711746b9898ea5d6bf990d3198f8bf",
+      "checks": {
+        "primaryTaskVisible": true,
+        "noOversizedHeadline": true,
+        "noDarkHeroObstruction": true,
+        "noLowResolutionUpscale": true,
+        "navigationComplete": true,
+        "noOverlap": true
+      }
+    },
+    {
+      "route": "/",
+      "width": 1920,
+      "height": 1080,
+      "file": "audit/screenshots/home-1920.png",
+      "sha256": "abfe83a11e5fdc1a3b091568831096263966edaf27c6c22208b9fdba3a1a74df",
+      "checks": {
+        "primaryTaskVisible": true,
+        "noOversizedHeadline": true,
+        "noDarkHeroObstruction": true,
+        "noLowResolutionUpscale": true,
+        "navigationComplete": true,
+        "noOverlap": true
+      }
+    },
+    {
+      "route": "/",
+      "width": 390,
+      "height": 844,
+      "file": "audit/screenshots/home-390.png",
+      "sha256": "b873b13d54d8260be03ec61deb67f55e5964aabea3aa6ae0e3928f6c7025b54e",
+      "checks": {
+        "primaryTaskVisible": true,
+        "noOversizedHeadline": true,
+        "noDarkHeroObstruction": true,
+        "noLowResolutionUpscale": true,
+        "navigationComplete": true,
+        "noOverlap": true
+      }
+    },
+    {
+      "route": "/codes/",
+      "width": 1440,
+      "height": 900,
+      "file": "audit/screenshots/codes-1440.png",
+      "sha256": "9c35b827d0453f0dd0b39975f38bd6294782eb79925e742beac72dcef4a75ab0",
+      "checks": {
+        "primaryTaskVisible": true,
+        "noOversizedHeadline": true,
+        "noDarkHeroObstruction": true,
+        "noLowResolutionUpscale": true,
+        "navigationComplete": true,
+        "noOverlap": true
+      }
+    }
+  ]
+}

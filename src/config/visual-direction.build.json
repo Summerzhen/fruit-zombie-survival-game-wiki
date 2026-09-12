@@ -1,0 +1,114 @@
+{
+  "defaultMode": "dark",
+  "defaultModeDecision": {
+    "mode": "dark",
+    "source": "verified-visual-evidence",
+    "sourceRef": "visualEvidence.visualMood and visualEvidence.observedColors dark mixed combat tones",
+    "rationale": "No explicit user theme preference was given. Research visual evidence describes zombie survival combat with darker scenes balanced by bright fruit/reward accents, so dark is the default for first paint."
+  },
+  "semanticTokens": {
+    "light": {
+      "background": "96 28% 97%",
+      "foreground": "148 28% 12%",
+      "surface": "0 0% 100%",
+      "primary": "142 55% 34%",
+      "accent": "279 74% 48%",
+      "danger": "355 72% 46%"
+    },
+    "dark": {
+      "background": "150 28% 8%",
+      "foreground": "95 35% 94%",
+      "surface": "150 22% 13%",
+      "primary": "136 62% 48%",
+      "accent": "278 75% 62%",
+      "danger": "358 78% 60%"
+    }
+  },
+  "sourceEvidence": [
+    {
+      "researchRef": "visualEvidence.observedColors[0]",
+      "appliesTo": [
+        "primary"
+      ],
+      "notes": "Green fruit/survival cue from official icon and Roblox artwork."
+    },
+    {
+      "researchRef": "visualEvidence.observedColors[1]",
+      "appliesTo": [
+        "accent"
+      ],
+      "notes": "Purple grape/event cue from Roblox title emoji and fruit branding context."
+    },
+    {
+      "researchRef": "visualEvidence.observedColors[2]",
+      "appliesTo": [
+        "background",
+        "surface",
+        "foreground",
+        "danger"
+      ],
+      "notes": "Darker combat tones and zombie survival mood from official screenshots/key art."
+    }
+  ],
+  "rationale": "Use a high-contrast dark action-survival interface with fruit-green primary actions, purple reward/event accents, and restrained danger red for failed/expired states. The visual language should feel like Roblox anime action without copying competitor layouts or colors.",
+  "contrastRequirements": {
+    "bodyTextMinRatio": 4.5,
+    "largeTextMinRatio": 3,
+    "stateCues": "Every status such as active, expired, stale, verified or warning must include text label or icon plus color."
+  },
+  "gameVisualLanguage": {
+    "sourceEvidence": [
+      "visualEvidence.officialLogo",
+      "visualEvidence.keyArt",
+      "visualEvidence.screenshots",
+      "visualEvidence.visualMood"
+    ],
+    "typography": "Bold readable sans for HUD-like headings; neutral sans for guide body text.",
+    "shapes": "Compact panels, sharp 6-8px radii, strong outlines for tables and status chips.",
+    "assetRules": "Use official Roblox icon/key art only after rights/source and crop verification; avoid inherited template artwork.",
+    "heroAssetGate": "Hero media must depict this game from official Roblox thumbnails or verified in-game screenshots and pass desktop/mobile crop review.",
+    "forbiddenPatterns": [
+      "generic zombie stock art",
+      "competitor icon/color copying",
+      "template game artwork from another title"
+    ]
+  },
+  "faviconDirection": {
+    "strategy": "official-icon",
+    "sourceEvidence": [
+      "visualEvidence.faviconEvidence.officialIconCandidates[0]"
+    ],
+    "concept": "Simplified fruit-versus-zombie survival icon derived from the official Roblox game icon crop, reduced to one bold fruit shape and one survival bite cue.",
+    "silhouette": "Large round fruit silhouette with a small contrasting bite/slash mark, centered in a square icon.",
+    "generationPromptEnglish": "Create a 512x512 PNG favicon for a Roblox Fruit Zombie Survival guide site: one bold green fruit silhouette with a simple purple survival bite accent, dark background, high contrast, clean vector-like edges, strong outline.",
+    "foreground": "Green fruit silhouette with purple accent based on official visual evidence.",
+    "background": "Dark survival backdrop matching the site dark token.",
+    "masterAsset": {
+      "format": "png",
+      "width": 512,
+      "height": 512
+    },
+    "safeZone": {
+      "contentMaxPercent": 78,
+      "paddingPercent": 12
+    },
+    "smallSizeRules": [
+      "At 16x16 keep only the round fruit silhouette and single bite accent.",
+      "Use flat shapes and remove decorative marks before ICO export."
+    ],
+    "requiredOutputs": [
+      "favicon.ico",
+      "favicon-16x16.png",
+      "favicon-32x32.png",
+      "apple-touch-icon.png",
+      "android-chrome-192x192.png",
+      "android-chrome-512x512.png"
+    ],
+    "prohibitions": [
+      "text",
+      "letters",
+      "wordmark",
+      "fine-detail"
+    ]
+  }
+}

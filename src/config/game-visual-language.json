@@ -1,0 +1,35 @@
+{
+  "sourceEvidence": [
+    "Roblox official icon/key art evidence from research visualEvidence",
+    "site-plan visualDirection semanticTokens",
+    "faviconDirection fruit silhouette concept"
+  ],
+  "palette": {
+    "background": "dark zombie-survival green-black",
+    "primary": "fruit green",
+    "accent": "purple artifact/reward cue",
+    "danger": "zombie damage red"
+  },
+  "typography": {
+    "display": "bold condensed HUD-like headings",
+    "body": "readable sans guide text",
+    "utility": "mono labels for status/date"
+  },
+  "motifs": [
+    "fruit silhouette",
+    "survival panels",
+    "wave/boss checklist structure",
+    "compact Roblox guide dashboard"
+  ],
+  "forbiddenPatterns": [
+    "generic zombie stock art",
+    "inherited template assets",
+    "letter badge icon",
+    "unsupported tier-list visuals"
+  ],
+  "heroAssetRules": [
+    "Use generated fruit-survival icon until official crop is cleared",
+    "Do not upscale low-resolution thumbnails",
+    "Keep primary task and codes CTA visible in first screen"
+  ]
+}

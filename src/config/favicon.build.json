@@ -1,0 +1,49 @@
+{
+  "faviconDirection": {
+    "strategy": "official-icon",
+    "sourceEvidence": [
+      "visualEvidence.faviconEvidence.officialIconCandidates[0]"
+    ],
+    "concept": "Simplified fruit-versus-zombie survival icon derived from the official Roblox game icon crop, reduced to one bold fruit shape and one survival bite cue.",
+    "silhouette": "Large round fruit silhouette with a small contrasting bite/slash mark, centered in a square icon.",
+    "generationPromptEnglish": "Create a 512x512 PNG favicon for a Roblox Fruit Zombie Survival guide site: one bold green fruit silhouette with a simple purple survival bite accent, dark background, high contrast, clean vector-like edges, strong outline.",
+    "foreground": "Green fruit silhouette with purple accent based on official visual evidence.",
+    "background": "Dark survival backdrop matching the site dark token.",
+    "masterAsset": {
+      "format": "png",
+      "width": 512,
+      "height": 512
+    },
+    "safeZone": {
+      "contentMaxPercent": 78,
+      "paddingPercent": 12
+    },
+    "smallSizeRules": [
+      "At 16x16 keep only the round fruit silhouette and single bite accent.",
+      "Use flat shapes and remove decorative marks before ICO export."
+    ],
+    "requiredOutputs": [
+      "favicon.ico",
+      "favicon-16x16.png",
+      "favicon-32x32.png",
+      "apple-touch-icon.png",
+      "android-chrome-192x192.png",
+      "android-chrome-512x512.png"
+    ],
+    "prohibitions": [
+      "text",
+      "letters",
+      "wordmark",
+      "fine-detail"
+    ]
+  },
+  "sourceDirectory": "content/brand/favicon",
+  "sha256": {
+    "favicon-32x32.png": "9adffd622edcda115e70d0d4e0c6dd87ea7c33bd693b92164e6f24f93c47edf9",
+    "apple-touch-icon.png": "bccb70dd035c40d3dbf383d04dfe9988b70aa79b62dbb2b04209bdfb5133bf16",
+    "android-chrome-512x512.png": "cffa898c85201da2ae843c72125d1f56c8ab45e0960ccfa8564c432951eb8665",
+    "favicon-16x16.png": "2a7676e03d708a0bd4d4384b8674f6681ef47201082d5aaadc502e1e6aab161a",
+    "favicon.ico": "05a682844470fa9c76c0534b833206a1c864076dded76a6565851f46bc6a4c98",
+    "android-chrome-192x192.png": "2abaa84908901231c29bfeeac2ef5a138651f3e17d596cdf852faa606559e3ce"
+  }
+}

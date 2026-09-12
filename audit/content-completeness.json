@@ -1,0 +1,132 @@
+{
+  "pages": [
+    {
+      "url": "/",
+      "primaryIntent": "site navigation and task selection",
+      "pageType": "homepage",
+      "tier": "answer",
+      "evidenceStatus": "verified",
+      "evidenceRefs": [
+        "home"
+      ],
+      "uniqueFacts": [
+        "site navigation and task selection",
+        "Choose codes, beginner, fruits, builds, currencies, bosses, or updates from the homepage."
+      ],
+      "quickAnswer": "Choose codes, beginner, fruits, builds, currencies, bosses, or updates from the homepage.",
+      "indexable": true
+    },
+    {
+      "url": "/codes/",
+      "primaryIntent": "codes and redemption",
+      "pageType": "guide",
+      "tier": "answer",
+      "evidenceStatus": "verified",
+      "evidenceRefs": [
+        "codes"
+      ],
+      "uniqueFacts": [
+        "codes and redemption",
+        "Reported codes and redeem steps are shown with current evidence limits."
+      ],
+      "quickAnswer": "Reported codes and redeem steps are shown with current evidence limits.",
+      "indexable": true
+    },
+    {
+      "url": "/beginner-guide/",
+      "primaryIntent": "beginner how to play",
+      "pageType": "guide",
+      "tier": "answer",
+      "evidenceStatus": "verified",
+      "evidenceRefs": [
+        "beginner-guide"
+      ],
+      "uniqueFacts": [
+        "beginner how to play",
+        "Start with fruit powers, wave survival, Berries, builds, and boss caution."
+      ],
+      "quickAnswer": "Start with fruit powers, wave survival, Berries, builds, and boss caution.",
+      "indexable": true
+    },
+    {
+      "url": "/diamonds-and-berries/",
+      "primaryIntent": "currency farming and progression",
+      "pageType": "guide",
+      "tier": "answer",
+      "evidenceStatus": "verified",
+      "evidenceRefs": [
+        "diamonds-berries"
+      ],
+      "uniqueFacts": [
+        "currency farming and progression",
+        "Berries are confirmed; exact Diamond rates stay conservative."
+      ],
+      "quickAnswer": "Berries are confirmed; exact Diamond rates stay conservative.",
+      "indexable": true
+    },
+    {
+      "url": "/fruits/",
+      "primaryIntent": "fruit lookup and choice guidance",
+      "pageType": "guide",
+      "tier": "answer",
+      "evidenceStatus": "verified",
+      "evidenceRefs": [
+        "fruits"
+      ],
+      "uniqueFacts": [
+        "fruit lookup and choice guidance",
+        "Use fruit powers by testing wave and boss survival, without unsupported rankings."
+      ],
+      "quickAnswer": "Use fruit powers by testing wave and boss survival, without unsupported rankings.",
+      "indexable": true
+    },
+    {
+      "url": "/builds/",
+      "primaryIntent": "build and class guidance",
+      "pageType": "guide",
+      "tier": "answer",
+      "evidenceStatus": "verified",
+      "evidenceRefs": [
+        "builds"
+      ],
+      "uniqueFacts": [
+        "build and class guidance",
+        "Choose builds around survival, wave clear, and boss pressure."
+      ],
+      "quickAnswer": "Choose builds around survival, wave clear, and boss pressure.",
+      "indexable": true
+    },
+    {
+      "url": "/bosses/",
+      "primaryIntent": "boss and wave survival",
+      "pageType": "guide",
+      "tier": "answer",
+      "evidenceStatus": "verified",
+      "evidenceRefs": [
+        "bosses"
+      ],
+      "uniqueFacts": [
+        "boss and wave survival",
+        "Prepare for waves and special bosses with survival-first play."
+      ],
+      "quickAnswer": "Prepare for waves and special bosses with survival-first play.",
+      "indexable": true
+    },
+    {
+      "url": "/updates/",
+      "primaryIntent": "update tracking",
+      "pageType": "guide",
+      "tier": "answer",
+      "evidenceStatus": "verified",
+      "evidenceRefs": [
+        "updates"
+      ],
+      "uniqueFacts": [
+        "update tracking",
+        "Recheck title, Roblox API updated timestamp, codes, and guide pages when the game changes."
+      ],
+      "quickAnswer": "Recheck title, Roblox API updated timestamp, codes, and guide pages when the game changes.",
+      "indexable": true
+    }
+  ]
+}

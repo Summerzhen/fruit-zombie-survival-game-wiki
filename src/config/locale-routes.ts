@@ -1,0 +1,1 @@
+export const LOCALE_ROUTES: Record<string, string[]> = {"en": ["/", "/about", "/start-here", "/start-here/index", "/bosses", "/bosses/index", "/builds", "/builds/index", "/codes", "/codes/index", "/copyright", "/diamonds-and-berries", "/diamonds-and-berries/index", "/fruits", "/fruits/index", "/privacy-policy", "/terms-of-service", "/updates", "/updates/index"]};

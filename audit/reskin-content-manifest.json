@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "files": {
+    "en/beginner-guide/index.mdx": "2b25d15e54cae9391becd4fc9187bb53dff6ba91788d2ff0b7a865a342cda41b",
+    "en/bosses/index.mdx": "984acb3575add9c0e1a5b9dce6fe11f543c18aec1ec02da803985ba684b11da2",
+    "en/builds/index.mdx": "e9c3b22b87fb807b2191bab2c3e996b704494248a777f17c508afd8af0edc582",
+    "en/codes/index.mdx": "c93fe85c1af4a73ff447587c65629daf1993ddefeb15a9735f6c01bc0a436082",
+    "en/diamonds-and-berries/index.mdx": "f65d591c0dc3035b1aed617132cc391a12bd57f78140707e56629b1ded694237",
+    "en/fruits/index.mdx": "9e7a408afeeafe658b343fb80b3df935a18a4dad7c9206c80c0021b107e7aeb8",
+    "en/updates/index.mdx": "cb9a1bb05a12b44ac628202557390cda0a7fd7425408fce1fd7ac427d9687b2b"
+  }
+}

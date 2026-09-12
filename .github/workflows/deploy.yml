@@ -1,0 +1,77 @@
+name: Deploy to Cloudflare
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: deploy-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Restore reviewed static release
+        run: python3 .github/site-launch/scripts/package-reviewed-release.py restore "$PWD" "$RUNNER_TEMP/site-launch-reviewed"
+
+      - name: Verify reviewed release and evidence
+        env:
+          EXPECTED_GA_ID: ${{ secrets.NEXT_PUBLIC_GA_MEASUREMENT_ID }}
+          EXPECTED_GSC_TOKEN: ${{ secrets.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION }}
+        run: |
+          DOMAIN="$(python3 -c 'import json; print(json.load(open(".github/release/manifest.json"))["domain"])')"
+          SITE="$RUNNER_TEMP/site-launch-reviewed/site"
+          python3 .github/site-launch/scripts/run-launch-gate.py "$SITE" "$DOMAIN" --project-dir "$RUNNER_TEMP/site-launch-reviewed" --phase predeploy --skip-build
+          python3 - "$SITE/out/index.html" <<'PY'
+          import os, pathlib, sys
+          html = pathlib.Path(sys.argv[1]).read_text(encoding="utf-8")
+          for key in ("EXPECTED_GA_ID", "EXPECTED_GSC_TOKEN"):
+              value = os.environ.get(key)
+              if not value or value not in html:
+                  raise SystemExit(f"Reviewed export does not match {key}; rebuild and repeat review")
+          PY
+          # Worker imports resolve from the checkout dependencies; static HTML is never rebuilt.
+          ln -s "$GITHUB_WORKSPACE/node_modules" "$SITE/node_modules"
+
+      - name: Deploy
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: deploy --config ${{ runner.temp }}/site-launch-reviewed/site/wrangler.jsonc
+
+      - name: Verify live canonical origin
+        env:
+          EXPECTED_GA_ID: ${{ secrets.NEXT_PUBLIC_GA_MEASUREMENT_ID }}
+          EXPECTED_GSC_TOKEN: ${{ secrets.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION }}
+        run: |
+          DOMAIN="$(python3 -c 'import json; print(json.load(open(".github/release/manifest.json"))["domain"])')"
+          cp -R "$RUNNER_TEMP/site-launch-reviewed/site/out" ./out
+          test -n "$DOMAIN"
+          INNER_FILE="$(find out -type f \( -name 'index.html' -o -name '*.html' \) -print0 | xargs -0 grep -l 'data-quick-answer' | grep -v '^out/index\.html$' | head -1)"
+          test -n "$INNER_FILE"
+          INNER_PATH="$(sed -n 's#.*<link rel="canonical" href="https://[^/]\+\([^\"]*\)".*#\1#p' "$INNER_FILE" | head -1)"
+          if [ -z "$INNER_PATH" ]; then
+            INNER_PATH="/${INNER_FILE#out/}"
+            INNER_PATH="${INNER_PATH%.html}/"
+            INNER_PATH="${INNER_PATH%/index/}/"
+          fi
+          test -n "$INNER_PATH"
+          bash .github/site-launch/scripts/canonical-origin-check.sh "$DOMAIN" "$INNER_PATH"
+          bash .github/site-launch/scripts/live-release-gate.sh "$DOMAIN" "$INNER_PATH"

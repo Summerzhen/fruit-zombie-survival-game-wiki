@@ -1,0 +1,353 @@
+{
+  "site": {
+    "name": "Fruit Zombie Survival",
+    "shortName": "Fruit Zombie Survival",
+    "tagline": "Independent fan wiki",
+    "description": "Help players decide what to do now in Fruit Zombie Survival: redeem current rewards, survive early waves, choose fruits/builds, farm currencies, handle boss encounters, and understand updates.",
+    "legalNotice": "Non-official fan wiki. Made by players, for players.",
+    "platformUrl": "https://www.roblox.com/games/75290583112878/Fruit-Zombie-Survival",
+    "discordUrl": "",
+    "youtubeUrl": "",
+    "communityToolUrl": "",
+    "primaryGuideHref": "/codes/"
+  },
+  "nav": {
+    "home": "Home",
+    "menu": "Menu",
+    "toggleTheme": "Toggle theme",
+    "start-here": "Beginner Guide",
+    "builds": "Builds",
+    "codes": "Codes",
+    "diamonds-and-berries": "Diamonds And Berries",
+    "fruits": "Fruits",
+    "updates": "Updates",
+    "currencies": "Currencies",
+    "language": "Language",
+    "primaryNavigation": "Primary navigation",
+    "secondaryNavigation": "More navigation",
+    "elite waves": "Elite Waves"
+  },
+  "home": {
+    "meta": {
+      "title": "Fruit Zombie Survival Guide, Codes, Fruits and Progression",
+      "description": "Help players decide what to do now in Fruit Zombie Survival: redeem current rewards, survive early waves, choose fruits/builds, farm currencies, handle boss encounters, and understand updates."
+    },
+    "hero": {
+      "title": "Fruit Zombie Survival",
+      "description": "Start from codes and updates if you are returning, or use the beginner and progression routes if you are new. Exact code validity, rates, comparisons, and entity tables stay source-gated.",
+      "primaryCta": "Check Codes and Updates",
+      "primaryHref": "/codes/"
+    },
+    "faq": {
+      "enabled": false,
+      "items": [],
+      "title": "FAQ",
+      "description": ""
+    },
+    "start": {
+      "eyebrow": "Start",
+      "title": "Check Codes and Updates",
+      "cards": []
+    },
+    "aboutGame": {
+      "title": "About Fruit Zombie Survival",
+      "paragraphs": [],
+      "stats": [],
+      "cta": "Check Codes and Updates"
+    },
+    "finalCta": {
+      "title": "Check Codes and Updates",
+      "description": "Help players decide what to do now in Fruit Zombie Survival: redeem current rewards, survive early waves, choose fruits/builds, farm currencies, handle boss encounters, and understand updates.",
+      "primary": "Check Codes and Updates",
+      "secondary": "Play",
+      "primaryHref": "/codes/"
+    },
+    "updates": {
+      "title": "Beginner Guide",
+      "browse": "Read more",
+      "viewAll": "Read more"
+    },
+    "popular": {
+      "eyebrow": "Popular Pages",
+      "title": "Featured Guides",
+      "quickLinks": [],
+      "cards": []
+    },
+    "explore": {
+      "title": "Fruit Zombie Survival Modules",
+      "description": "Browse key topics for Fruit Zombie Survival. Start with the route that matches your task, then verify dated details before treating rewards, rates, comparisons, or entity rows as current. Keep a clear note of what was observed in the current build and what still needs a direct source before becoming a table or recommendation.",
+      "modules": [],
+      "searchLabel": "Search pages",
+      "allLabel": "All pages",
+      "noResultsLabel": "No matching pages"
+    }
+  },
+  "footer": {
+    "aboutTitle": "Fruit Zombie Survival Wiki",
+    "about": "Fruit Zombie Survival Wiki is an independent fan guide site.",
+    "description": "Help players decide what to do now in Fruit Zombie Survival: redeem current rewards, survive early waves, choose fruits/builds, farm currencies, handle boss encounters, and understand updates.",
+    "quickLinks": "Guides",
+    "guides": "Guides",
+    "playGame": "Play now",
+    "officialDiscord": "Discord",
+    "officialYoutube": "YouTube",
+    "vvBuilder": "Community Tool",
+    "beginnerGuide": "Check Codes and Updates",
+    "raceGuides": "Beginner Guide",
+    "bossGuides": "Elite Waves",
+    "buildGuide": "Builds",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service",
+    "copyright": "2026 Fruit Zombie Survival Wiki. Independent fan-made guide."
+  },
+  "shared": {
+    "wikiNavigation": "Wiki Navigation",
+    "home": "Home",
+    "readMore": "Read more",
+    "noGuidesAvailable": "No guides available yet.",
+    "tableOfContents": "Table of Contents",
+    "inThisSection": "Table of Contents",
+    "relatedGuides": "Related Guides",
+    "archiveIndex": "Page directory",
+    "pageCountLabel": "Pages",
+    "codeEvidenceLabel": "Review date",
+    "pageDirectory": "Page directory",
+    "quickAnswer": "Quick answer",
+    "articleDetails": "Article details",
+    "published": "Published",
+    "updated": "Updated",
+    "morePages": "More pages",
+    "morePagesDescription": "Browse other pages in this category.",
+    "overview": "Overview",
+    "translationUnavailable": "Translation unavailable"
+  },
+  "sidebarCodes": [],
+  "metadata": {},
+  "start-here": {
+    "overviewTitle": "Fruit Zombie Survival Beginner Guide",
+    "overviewDescription": "The verified loop is to eat a Devil Fruit, survive zombie waves and elite waves, use Berries for power, place One Piece-inspired builds, and use co-op when helpful.",
+    "overviewMetaTitle": "Fruit Zombie Survival Beginner Guide"
+  },
+  "builds": {
+    "overviewTitle": "Builds and Classes",
+    "overviewDescription": "The official source confirms One Piece-inspired character builds that can be placed. Build names, synergies, and comparisons remain evidence-gated.",
+    "overviewMetaTitle": "Fruit Zombie Survival Builds and Classes"
+  },
+  "codes": {
+    "overviewTitle": "Fruit Zombie Survival Codes",
+    "overviewDescription": "Use this page for reported current codes, rewards, redeem steps, and code troubleshooting. Active rows must be backed by dated source excerpts and refreshed within the stated window.",
+    "overviewMetaTitle": "Fruit Zombie Survival Codes and Redeem Help"
+  },
+  "diamonds-and-berries": {
+    "overviewTitle": "Diamonds and Berries",
+    "overviewDescription": "Berries are officially tied to powering up during a run. Diamond farming has strong video demand, but exact rates and best routes need page-level evidence before publication.",
+    "overviewMetaTitle": "Fruit Zombie Survival Diamonds and Berries Guide"
+  },
+  "fruits": {
+    "overviewTitle": "Fruit Zombie Survival Fruits",
+    "overviewDescription": "The official source confirms 20 collectible fruits. Publish beginner choice guidance conservatively until fruit names, powers, unlocks, and comparisons have entity-level evidence.",
+    "overviewMetaTitle": "Fruit Zombie Survival Fruits Guide"
+  },
+  "updates": {
+    "overviewTitle": "Updates and Artifacts",
+    "overviewDescription": "Roblox evidence currently supports an Artifacts title prefix and a September 12, 2026 API update timestamp; code and guide claims must be rechecked when these signals change.",
+    "overviewMetaTitle": "Fruit Zombie Survival Updates and Artifacts Tracker"
+  },
+  "search": {
+    "button": "Search pages",
+    "placeholder": "Search pages",
+    "hint": "Enter a topic or question",
+    "empty": "No matching pages",
+    "results": "Search results",
+    "close": "Close search"
+  },
+  "productPlan": {
+    "siteArchetype": "Roblox live-service guide hub with code tracker, beginner routes, progression explainers, and structured reference foundations.",
+    "primaryUserTask": "Help players decide what to do now in Fruit Zombie Survival: redeem current rewards, survive early waves, choose fruits/builds, farm currencies, handle boss encounters, and understand updates.",
+    "primaryContentObject": "Source-dated player task pages backed by a small structured foundation: codes, fruits, builds/classes, currencies, boss encounters/waves, and updates.",
+    "homepage": {
+      "primaryAction": {
+        "type": "internal-link",
+        "label": "Check Codes and Updates",
+        "href": "/codes/",
+        "userTask": "Redeem rewards and see what changed before starting or returning to a run."
+      },
+      "sections": [
+        {
+          "id": "codes-update",
+          "title": "Codes and Update Check",
+          "intent": "current codes, rewards, redeem steps, and update changes",
+          "entryLinks": [
+            "/codes/",
+            "/updates/"
+          ]
+        },
+        {
+          "id": "start-route",
+          "title": "Start and Survive",
+          "intent": "beginner how to play, first run route, wave survival basics",
+          "entryLinks": [
+            "/start-here/",
+            "/elite waves/"
+          ]
+        },
+        {
+          "id": "progression-route",
+          "title": "Farm and Upgrade",
+          "intent": "Diamonds, Berries, fruit/build choices and progression decisions",
+          "entryLinks": [
+            "/diamonds-and-berries/",
+            "/fruits/",
+            "/builds/"
+          ]
+        },
+        {
+          "id": "reference-foundation",
+          "title": "Reference Tables",
+          "intent": "structured fruit, build, currency and boss lookup when source support is available",
+          "entryLinks": [
+            "/fruits/",
+            "/builds/",
+            "/elite waves/"
+          ]
+        }
+      ]
+    },
+    "navigation": [
+      {
+        "label": "Codes",
+        "href": "/codes/"
+      },
+      {
+        "label": "Beginner Guide",
+        "href": "/start-here/"
+      },
+      {
+        "label": "Fruits",
+        "href": "/fruits/"
+      },
+      {
+        "label": "Builds",
+        "href": "/builds/"
+      },
+      {
+        "label": "Currencies",
+        "href": "/diamonds-and-berries/"
+      },
+      {
+        "label": "boss encounters",
+        "href": "/elite waves/"
+      },
+      {
+        "label": "Updates",
+        "href": "/updates/"
+      }
+    ],
+    "productFeatures": [
+      {
+        "id": "fresh-code-status",
+        "name": "Current codes and redeem helper",
+        "userTask": "Find working Fruit Zombie Survival codes, rewards, redemption steps, and fixes when a code fails.",
+        "demandEvidence": [
+          "research.demandSignals[0] multiple current-month code results",
+          "research.communityDemandSignals[0] asks for current codes and rewards",
+          "research.communityDemandSignals[1] asks how to redeem codes",
+          "serp-competitors keywords Fruit Zombie Survival codes show Game Rant, Pro Game Guides, Destructoid, Nerdschalk, SuperCheats and MrGuider competing"
+        ],
+        "dataSources": [
+          "Pro Game Guides, Game Rant, Destructoid and other SERP code rows",
+          "Roblox official page for game identity",
+          "future content/code-items.json after source excerpts confirm each code and reward"
+        ],
+        "implementation": {
+          "component": "Codes page table with checked date, source links, redeem steps and not-working checklist",
+          "emptyState": "If no code meets the source gate, show redeem steps and update watch without active-code rows"
+        },
+        "maintenance": {
+          "frequency": "Daily during September launch/update windows, then twice weekly while Roblox update timestamp or SERP code pages change",
+          "staleSignal": "Conflicting code lists, expired dates, Roblox title/event update, or content/code-items.json source older than 72 hours during active events"
+        }
+      },
+      {
+        "id": "first-run-route",
+        "name": "Beginner survival route",
+        "userTask": "Learn what to do first: eat a fruit, survive waves, use Berries, understand boss encounters, and place/use builds.",
+        "demandEvidence": [
+          "research.demandSignals[2] how to play / beginner guide demand",
+          "YouTube rows 46z26vvlO9E and ot6bJimnVSE target how to play/full guide",
+          "official Roblox description confirms fruits, waves, boss encounters, Berries, builds and co-op"
+        ],
+        "dataSources": [
+          "Roblox official description and API",
+          "YouTube beginner/how-to rows saved in evidence/youtube.json",
+          "SEOScout extracted official Roblox and guide snippets"
+        ],
+        "implementation": {
+          "component": "Step-by-step guide page with task cards and links to fruit/build/currency/boss pages",
+          "emptyState": "No empty state; if exact numbers are missing, keep the route qualitative and source-dated"
+        },
+        "maintenance": {
+          "frequency": "Recheck after Roblox API updated timestamp changes or new high-view guide videos appear",
+          "staleSignal": "New event prefix, new update article, or YouTube guide titles mentioning changed mechanics"
+        }
+      },
+      {
+        "id": "progression-foundation",
+        "name": "Progression and entity foundation",
+        "userTask": "Compare fruits, builds, currencies and boss encounters without guessing unsupported exact stats.",
+        "demandEvidence": [
+          "research.contentObjects list code, fruit, currency and boss/wave objects",
+          "YouTube rows yGS64d6hLJ4 and DvsSRJWfm-c focus on Diamonds fast",
+          "research.siteDemandModelCandidates includes database-build with partial support"
+        ],
+        "dataSources": [
+          "Roblox official page for 20 fruits, Berries, boss encounters and builds",
+          "YouTube evidence for Diamonds/farming demand",
+          "Page-level evidence files for each entity before exact stats publish"
+        ],
+        "implementation": {
+          "component": "Reference tables with fields gated by evidence status and links to deeper guide pages",
+          "emptyState": "Unknown exact values remain omitted; no placeholder comparisons"
+        },
+        "maintenance": {
+          "frequency": "Weekly foundation refresh, plus immediate refresh when Roblox updated timestamp changes",
+          "staleSignal": "New fruits, code rewards, class/build names, boss names or currency methods appear in official or high-confidence guide evidence"
+        }
+      }
+    ],
+    "localization": {
+      "decision": "english-only",
+      "defaultLocale": "en",
+      "rationale": "English is the launch default and the only language with enough collected planning evidence to support all P0/P1 pages immediately. Portuguese (Brazil) and Spanish are good post-launch candidates from research audience/search signals; French remains needs-research.",
+      "targetLocales": [],
+      "researchDecisions": [
+        {
+          "locale": "pt-BR",
+          "decision": "needs-research",
+          "reason": "Research recommended post-launch, but Similarweb/Trends failed and page evidence should stabilize before translation."
+        },
+        {
+          "locale": "es",
+          "decision": "needs-research",
+          "reason": "Research recommended post-launch; add after English code and guide evidence is stable."
+        },
+        {
+          "locale": "fr",
+          "decision": "needs-research",
+          "reason": "Low-confidence research candidate requiring dedicated French SERP evidence."
+        }
+      ]
+    },
+    "excludedTopics": [
+      "Exploit executors and automation pastebins",
+      "Uncommunity Discord join pages without confirmed official source",
+      "Exact drop rates or tier comparisons without page-level support",
+      "Generic Roblox identity verification as a primary page task"
+    ]
+  },
+  "elite waves": {
+    "overviewTitle": "Elite Waves",
+    "overviewDescription": "The official source confirms endless zombie waves and special elite waves. Publish preparation guidance without inventing names, timings, drops, or counters.",
+    "overviewMetaTitle": "Fruit Zombie Survival Elite Waves"
+  }
+}

@@ -1,0 +1,1357 @@
+{
+  "contractVersion": 1,
+  "siteArchetype": "Roblox live-service guide hub with code tracker, beginner routes, progression explainers, and structured reference foundations.",
+  "primaryUserTask": "Help players decide what to do now in Fruit Zombie Survival: redeem current rewards, survive early waves, choose fruits/builds, farm currencies, handle boss encounters, and understand updates.",
+  "primaryContentObject": "Source-dated player task pages backed by a small structured foundation: codes, fruits, builds/classes, currencies, boss encounters/waves, and updates.",
+  "homepage": {
+    "primaryAction": {
+      "type": "internal-link",
+      "label": "Check Codes and Updates",
+      "href": "/codes/",
+      "userTask": "Redeem rewards and see what changed before starting or returning to a run."
+    },
+    "sections": [
+      {
+        "id": "codes-update",
+        "title": "Codes and Update Check",
+        "intent": "current codes, rewards, redeem steps, and update changes",
+        "entryLinks": [
+          "/codes/",
+          "/updates/"
+        ]
+      },
+      {
+        "id": "start-route",
+        "title": "Start and Survive",
+        "intent": "beginner how to play, first run route, wave survival basics",
+        "entryLinks": [
+          "/start-here/",
+          "/bosses/"
+        ]
+      },
+      {
+        "id": "progression-route",
+        "title": "Farm and Upgrade",
+        "intent": "Diamonds, Berries, fruit/build choices and progression decisions",
+        "entryLinks": [
+          "/diamonds-and-berries/",
+          "/fruits/",
+          "/builds/"
+        ]
+      },
+      {
+        "id": "reference-foundation",
+        "title": "Reference Tables",
+        "intent": "structured fruit, build, currency and boss lookup when source support is available",
+        "entryLinks": [
+          "/fruits/",
+          "/builds/",
+          "/bosses/"
+        ]
+      }
+    ]
+  },
+  "navigation": [
+    {
+      "label": "Codes",
+      "href": "/codes/"
+    },
+    {
+      "label": "Beginner Guide",
+      "href": "/start-here/"
+    },
+    {
+      "label": "Fruits",
+      "href": "/fruits/"
+    },
+    {
+      "label": "Builds",
+      "href": "/builds/"
+    },
+    {
+      "label": "Currencies",
+      "href": "/diamonds-and-berries/"
+    },
+    {
+      "label": "boss encounters",
+      "href": "/bosses/"
+    },
+    {
+      "label": "Updates",
+      "href": "/updates/"
+    }
+  ],
+  "productFeatures": [
+    {
+      "id": "fresh-code-status",
+      "name": "Current codes and redeem helper",
+      "userTask": "Find working Fruit Zombie Survival codes, rewards, redemption steps, and fixes when a code fails.",
+      "demandEvidence": [
+        "research.demandSignals[0] multiple current-month code results",
+        "research.communityDemandSignals[0] asks for current codes and rewards",
+        "research.communityDemandSignals[1] asks how to redeem codes",
+        "serp-competitors keywords Fruit Zombie Survival codes show Game Rant, Pro Game Guides, Destructoid, Nerdschalk, SuperCheats and MrGuider competing"
+      ],
+      "dataSources": [
+        "Pro Game Guides, Game Rant, Destructoid and other SERP code rows",
+        "Roblox official page for game identity",
+        "future content/code-items.json after source excerpts confirm each code and reward"
+      ],
+      "implementation": {
+        "component": "Codes page table with checked date, source links, redeem steps and not-working checklist",
+        "emptyState": "If no code meets the source gate, show redeem steps and update watch without active-code rows"
+      },
+      "maintenance": {
+        "frequency": "Daily during September launch/update windows, then twice weekly while Roblox update timestamp or SERP code pages change",
+        "staleSignal": "Conflicting code lists, expired dates, Roblox title/event update, or content/code-items.json source older than 72 hours during active events"
+      }
+    },
+    {
+      "id": "first-run-route",
+      "name": "Beginner survival route",
+      "userTask": "Learn what to do first: eat a fruit, survive waves, use Berries, understand boss encounters, and place/use builds.",
+      "demandEvidence": [
+        "research.demandSignals[2] how to play / beginner guide demand",
+        "YouTube rows 46z26vvlO9E and ot6bJimnVSE target how to play/full guide",
+        "official Roblox description confirms fruits, waves, boss encounters, Berries, builds and co-op"
+      ],
+      "dataSources": [
+        "Roblox official description and API",
+        "YouTube beginner/how-to rows saved in evidence/youtube.json",
+        "SEOScout extracted official Roblox and guide snippets"
+      ],
+      "implementation": {
+        "component": "Step-by-step guide page with task cards and links to fruit/build/currency/boss pages",
+        "emptyState": "No empty state; if exact numbers are missing, keep the route qualitative and source-dated"
+      },
+      "maintenance": {
+        "frequency": "Recheck after Roblox API updated timestamp changes or new high-view guide videos appear",
+        "staleSignal": "New event prefix, new update article, or YouTube guide titles mentioning changed mechanics"
+      }
+    },
+    {
+      "id": "progression-foundation",
+      "name": "Progression and entity foundation",
+      "userTask": "Compare fruits, builds, currencies and boss encounters without guessing unsupported exact stats.",
+      "demandEvidence": [
+        "research.contentObjects list code, fruit, currency and boss/wave objects",
+        "YouTube rows yGS64d6hLJ4 and DvsSRJWfm-c focus on Diamonds fast",
+        "research.siteDemandModelCandidates includes database-build with partial support"
+      ],
+      "dataSources": [
+        "Roblox official page for 20 fruits, Berries, boss encounters and builds",
+        "YouTube evidence for Diamonds/farming demand",
+        "Page-level evidence files for each entity before exact stats publish"
+      ],
+      "implementation": {
+        "component": "Reference tables with fields gated by evidence status and links to deeper guide pages",
+        "emptyState": "Unknown exact values remain omitted; no placeholder comparisons"
+      },
+      "maintenance": {
+        "frequency": "Weekly foundation refresh, plus immediate refresh when Roblox updated timestamp changes",
+        "staleSignal": "New fruits, code rewards, class/build names, boss names or currency methods appear in official or high-confidence guide evidence"
+      }
+    }
+  ],
+  "localization": {
+    "decision": "english-only",
+    "defaultLocale": "en",
+    "rationale": "English is the launch default and the only language with enough collected planning evidence to support all P0/P1 pages immediately. Portuguese (Brazil) and Spanish are good post-launch candidates from research audience/search signals; French remains needs-research.",
+    "targetLocales": [],
+    "researchDecisions": [
+      {
+        "locale": "pt-BR",
+        "decision": "needs-research",
+        "reason": "Research recommended post-launch, but Similarweb/Trends failed and page evidence should stabilize before translation."
+      },
+      {
+        "locale": "es",
+        "decision": "needs-research",
+        "reason": "Research recommended post-launch; add after English code and guide evidence is stable."
+      },
+      {
+        "locale": "fr",
+        "decision": "needs-research",
+        "reason": "Low-confidence research candidate requiring dedicated French SERP evidence."
+      }
+    ]
+  },
+  "visualDirection": {
+    "defaultMode": "dark",
+    "defaultModeDecision": {
+      "mode": "dark",
+      "source": "verified-visual-evidence",
+      "sourceRef": "visualEvidence.visualMood and visualEvidence.observedColors dark mixed combat tones",
+      "rationale": "No explicit user theme preference was given. Research visual evidence describes zombie survival combat with darker scenes balanced by bright fruit/reward accents, so dark is the default for first paint."
+    },
+    "semanticTokens": {
+      "light": {
+        "background": "96 28% 97%",
+        "foreground": "148 28% 12%",
+        "surface": "0 0% 100%",
+        "primary": "142 55% 34%",
+        "accent": "279 74% 48%",
+        "danger": "355 72% 46%"
+      },
+      "dark": {
+        "background": "150 28% 8%",
+        "foreground": "95 35% 94%",
+        "surface": "150 22% 13%",
+        "primary": "136 62% 48%",
+        "accent": "278 75% 62%",
+        "danger": "358 78% 60%"
+      }
+    },
+    "sourceEvidence": [
+      {
+        "researchRef": "visualEvidence.observedColors[0]",
+        "appliesTo": [
+          "primary"
+        ],
+        "notes": "Green fruit/survival cue from official icon and Roblox artwork."
+      },
+      {
+        "researchRef": "visualEvidence.observedColors[1]",
+        "appliesTo": [
+          "accent"
+        ],
+        "notes": "Purple grape/event cue from Roblox title emoji and fruit branding context."
+      },
+      {
+        "researchRef": "visualEvidence.observedColors[2]",
+        "appliesTo": [
+          "background",
+          "surface",
+          "foreground",
+          "danger"
+        ],
+        "notes": "Darker combat tones and zombie survival mood from official screenshots/key art."
+      }
+    ],
+    "rationale": "Use a high-contrast dark action-survival interface with fruit-green primary actions, purple reward/event accents, and restrained danger red for failed/expired states. The visual language should feel like Roblox anime action without copying competitor layouts or colors.",
+    "contrastRequirements": {
+      "bodyTextMinRatio": 4.5,
+      "largeTextMinRatio": 3,
+      "stateCues": "Every status such as active, expired, stale, verified or warning must include text label or icon plus color."
+    },
+    "gameVisualLanguage": {
+      "sourceEvidence": [
+        "visualEvidence.officialLogo",
+        "visualEvidence.keyArt",
+        "visualEvidence.screenshots",
+        "visualEvidence.visualMood"
+      ],
+      "typography": "Bold readable sans for HUD-like headings; neutral sans for guide body text.",
+      "shapes": "Compact panels, sharp 6-8px radii, strong outlines for tables and status chips.",
+      "assetRules": "Use official Roblox icon/key art only after rights/source and crop verification; avoid inherited template artwork.",
+      "heroAssetGate": "Hero media must depict this game from official Roblox thumbnails or verified in-game screenshots and pass desktop/mobile crop review.",
+      "forbiddenPatterns": [
+        "generic zombie stock art",
+        "competitor icon/color copying",
+        "template game artwork from another title"
+      ]
+    },
+    "faviconDirection": {
+      "strategy": "official-icon",
+      "sourceEvidence": [
+        "visualEvidence.faviconEvidence.officialIconCandidates[0]"
+      ],
+      "concept": "Simplified fruit-versus-zombie survival icon derived from the official Roblox game icon crop, reduced to one bold fruit shape and one survival bite cue.",
+      "silhouette": "Large round fruit silhouette with a small contrasting bite/slash mark, centered in a square icon.",
+      "generationPromptEnglish": "Create a 512x512 PNG favicon for a Roblox Fruit Zombie Survival guide site: one bold green fruit silhouette with a simple purple survival bite accent, dark background, high contrast, clean vector-like edges, strong outline.",
+      "foreground": "Green fruit silhouette with purple accent based on official visual evidence.",
+      "background": "Dark survival backdrop matching the site dark token.",
+      "masterAsset": {
+        "format": "png",
+        "width": 512,
+        "height": 512
+      },
+      "safeZone": {
+        "contentMaxPercent": 78,
+        "paddingPercent": 12
+      },
+      "smallSizeRules": [
+        "At 16x16 keep only the round fruit silhouette and single bite accent.",
+        "Use flat shapes and remove decorative marks before ICO export."
+      ],
+      "requiredOutputs": [
+        "favicon.ico",
+        "favicon-16x16.png",
+        "favicon-32x32.png",
+        "apple-touch-icon.png",
+        "android-chrome-192x192.png",
+        "android-chrome-512x512.png"
+      ],
+      "prohibitions": [
+        "text",
+        "letters",
+        "wordmark",
+        "fine-detail"
+      ]
+    }
+  },
+  "excludedTopics": [
+    "Exploit executors and automation pastebins",
+    "Uncommunity Discord join pages without confirmed official source",
+    "Exact drop rates or tier comparisons without page-level support",
+    "Generic Roblox identity verification as a primary page task"
+  ],
+  "updateLoop": {
+    "sources": [
+      "Roblox experience page and games API",
+      "SERP code competitors from SEOScout",
+      "YouTube search evidence for guide/update videos",
+      "content/code-items.json verified rows when created"
+    ],
+    "frequency": "Daily during launch/update weeks for codes and updates; weekly for guide/entity foundations.",
+    "stalePolicy": "Mark code/update pages stale when Roblox API updated timestamp changes, event prefix changes, top code pages disagree, or a saved page review is older than the planned update window.",
+    "owner": "site-launch-agent production workflow and future post-launch optimization runs"
+  },
+  "media": {},
+  "pageBriefs": [
+    {
+      "id": "home",
+      "title": "Fruit Zombie Survival",
+      "url": "/",
+      "keyword": "Fruit Zombie Survival guide",
+      "priority": "P0",
+      "intent": "Route players by task across codes, beginner survival, progression, and update checks.",
+      "primaryIntent": "site navigation and task selection",
+      "pageType": "homepage",
+      "featureRole": "content",
+      "userTask": "Choose the right entry point for codes, beginner play, progression, fruits, builds, boss encounters, and updates.",
+      "requiredEvidence": [
+        "Canonical game identity and task-routing scope",
+        "Homepage entries for every P0/P1 launch page",
+        "Safe current-status language for codes and updates"
+      ],
+      "requiredSections": [
+        "quick-answer",
+        "what-is-known",
+        "steps-or-decisions",
+        "source-notes",
+        "related-pages"
+      ],
+      "targetLength": "900-1400 words",
+      "evidenceRefs": [
+        {
+          "ref": "research.officialSources[0]",
+          "source": "research",
+          "text": "Official Roblox experience page confirms the game identity and public description: eat a Devil Fruit, 20 fruits, endless zombie waves, special boss encounters, One Piece-inspired builds, Berries, and co-op.",
+          "url": "https://www.roblox.com/games/75290583112878/Fruit-Zombie-Survival"
+        },
+        {
+          "ref": "research.officialSources[1]",
+          "source": "research",
+          "text": "Roblox API confirms universe 10654199482, root place 75290583112878, created and updated timestamps, and current released status.",
+          "url": "https://games.roblox.com/v1/games?universeIds=10654199482"
+        },
+        {
+          "ref": "serp:gamerant-codes",
+          "source": "serp-competitors",
+          "text": "Game Rant Fruit Zombie Survival Codes result surfaced for code demand and basic game description.",
+          "url": "https://gamerant.com/fruit-zombie-survival-codes-roblox/"
+        },
+        {
+          "ref": "serp:destructoid-codes",
+          "source": "serp-competitors",
+          "text": "Destructoid snippet lists active Fruit Zombie Survival codes including VibeStarter, Up5ndc0ming, and Disc0rd with rewards; exact active status remains third-party and update recency-sensitive.",
+          "url": "https://www.destructoid.com/fruit-zombie-survival-codes/"
+        },
+        {
+          "ref": "serp:progameguides-codes",
+          "source": "serp-competitors",
+          "text": "Pro Game Guides current-month codes article covers Fruit Zombie Survival codes and redeem steps.",
+          "url": "https://progameguides.com/roblox/fruit-zombie-survival-codes/"
+        },
+        {
+          "ref": "youtube:46z26vvlO9E",
+          "source": "youtube",
+          "text": "4 NEW CODES & HOW TO PLAY! | Fruit Zombie Survival ROBLOX (September 10, 2026)",
+          "title": "4 NEW CODES & HOW TO PLAY! | Fruit Zombie Survival ROBLOX (September 10, 2026)",
+          "viewCount": 3715,
+          "videoId": "46z26vvlO9E",
+          "url": "https://www.youtube.com/watch?v=46z26vvlO9E"
+        },
+        {
+          "ref": "youtube:ot6bJimnVSE",
+          "source": "youtube",
+          "text": "How to Play Fruit Zombie Survival Roblox Full Guide",
+          "title": "How to Play Fruit Zombie Survival Roblox Full Guide",
+          "viewCount": 749,
+          "videoId": "ot6bJimnVSE",
+          "url": "https://www.youtube.com/watch?v=ot6bJimnVSE"
+        }
+      ],
+      "evidenceStatus": "sufficient",
+      "generationStatus": "ready",
+      "uniqueInformationDelta": [
+        "Routes code hunters to /codes/ instead of making exact code claims on the homepage",
+        "Separates beginner survival, progression, reference, and update intents into owned URLs"
+      ],
+      "answerOutline": [
+        {
+          "heading": "Quick answer",
+          "questions": [
+            "Canonical game identity and task-routing scope"
+          ],
+          "presentation": "prose",
+          "rationale": "Put the answer before explanation."
+        },
+        {
+          "heading": "Source-backed details",
+          "questions": [
+            "Canonical game identity and task-routing scope",
+            "Homepage entries for every P0/P1 launch page",
+            "Safe current-status language for codes and updates"
+          ],
+          "presentation": "prose",
+          "rationale": "Tie every material claim to the saved evidence boundary."
+        },
+        {
+          "heading": "Limits and next checks",
+          "questions": [
+            "Safe current-status language for codes and updates"
+          ],
+          "presentation": "cards",
+          "rationale": "Keep unsupported exact claims out of generation."
+        }
+      ],
+      "answerFactRefs": [
+        "research.facts[0]",
+        "research.facts[1]",
+        "research.facts[2]",
+        "research.facts[3]"
+      ],
+      "keywordPlacement": {
+        "title": "Fruit Zombie Survival Guide, Codes, Fruits and Progression",
+        "h1": "Fruit Zombie Survival",
+        "quickAnswer": "Start from codes and updates if you are returning, or use the beginner and progression routes if you are new. Exact code validity, rates, comparisons, and entity tables stay source-gated."
+      },
+      "update recencyPolicy": {
+        "recheckSource": [
+          "Roblox games API",
+          "Roblox experience page",
+          "SERP code competitors"
+        ],
+        "maxAgeHours": 24,
+        "staleAction": "Refresh homepage current-status language before publishing if code/update evidence is older than 24 hours."
+      }
+    },
+    {
+      "id": "codes",
+      "title": "Fruit Zombie Survival Codes",
+      "url": "/codes/",
+      "keyword": "Fruit Zombie Survival codes",
+      "priority": "P0",
+      "intent": "Current Fruit Zombie Survival codes, rewards, redemption steps and code troubleshooting.",
+      "primaryIntent": "codes and redemption",
+      "pageType": "codes-status",
+      "featureRole": "content",
+      "userTask": "Check current reported codes, rewards, redemption steps, and what to do when a code fails.",
+      "requiredEvidence": [
+        "Current reported code strings and rewards must come from dated source excerpts",
+        "Redeem steps must be source-supported or clearly marked as third-party guidance",
+        "Code validity must show checked date, conflicts, and stale action"
+      ],
+      "requiredSections": [
+        "quick-answer",
+        "what-is-known",
+        "steps-or-decisions",
+        "source-notes",
+        "related-pages"
+      ],
+      "targetLength": "900-1400 words",
+      "evidenceRefs": [
+        {
+          "ref": "serp:gamerant-codes",
+          "source": "serp-competitors",
+          "text": "Game Rant Fruit Zombie Survival Codes result surfaced for code demand and basic game description.",
+          "url": "https://gamerant.com/fruit-zombie-survival-codes-roblox/"
+        },
+        {
+          "ref": "serp:destructoid-codes",
+          "source": "serp-competitors",
+          "text": "Destructoid snippet lists active Fruit Zombie Survival codes including VibeStarter, Up5ndc0ming, and Disc0rd with rewards; exact active status remains third-party and update recency-sensitive.",
+          "url": "https://www.destructoid.com/fruit-zombie-survival-codes/"
+        },
+        {
+          "ref": "serp:progameguides-codes",
+          "source": "serp-competitors",
+          "text": "Pro Game Guides current-month codes article covers Fruit Zombie Survival codes and redeem steps.",
+          "url": "https://progameguides.com/roblox/fruit-zombie-survival-codes/"
+        },
+        {
+          "ref": "youtube:c7j_Z9WAFds",
+          "source": "youtube",
+          "text": "ALL WORKING FRUIT ZOMBIE SURVIVAL CODES ROBLOX - All New Fruit Zombie Survival Codes 2026!",
+          "title": "ALL WORKING FRUIT ZOMBIE SURVIVAL CODES ROBLOX - All New Fruit Zombie Survival Codes 2026!",
+          "viewCount": 734,
+          "videoId": "c7j_Z9WAFds",
+          "url": "https://www.youtube.com/watch?v=c7j_Z9WAFds"
+        },
+        {
+          "ref": "research.officialSources[0]",
+          "source": "research",
+          "text": "Official Roblox experience page confirms the game identity and public description: eat a Devil Fruit, 20 fruits, endless zombie waves, special boss encounters, One Piece-inspired builds, Berries, and co-op.",
+          "url": "https://www.roblox.com/games/75290583112878/Fruit-Zombie-Survival"
+        },
+        {
+          "ref": "research.officialSources[1]",
+          "source": "research",
+          "text": "Roblox API confirms universe 10654199482, root place 75290583112878, created and updated timestamps, and current released status.",
+          "url": "https://games.roblox.com/v1/games?universeIds=10654199482"
+        }
+      ],
+      "evidenceStatus": "sufficient",
+      "generationStatus": "update-required",
+      "uniqueInformationDelta": [
+        "Must distinguish third-party reported active codes from official confirmation",
+        "Includes code failure checklist: typo/case, already redeemed, expired, server/client refresh, and stale list conflict"
+      ],
+      "answerOutline": [
+        {
+          "heading": "Quick answer",
+          "questions": [
+            "Current reported code strings and rewards must come from dated source excerpts"
+          ],
+          "presentation": "prose",
+          "rationale": "Put the answer before explanation."
+        },
+        {
+          "heading": "Source-backed details",
+          "questions": [
+            "Current reported code strings and rewards must come from dated source excerpts",
+            "Redeem steps must be source-supported or clearly marked as third-party guidance",
+            "Code validity must show checked date, conflicts, and stale action"
+          ],
+          "presentation": "steps",
+          "rationale": "Tie every material claim to the saved evidence boundary."
+        },
+        {
+          "heading": "Limits and next checks",
+          "questions": [
+            "Code validity must show checked date, conflicts, and stale action"
+          ],
+          "presentation": "cards",
+          "rationale": "Keep unsupported exact claims out of generation."
+        }
+      ],
+      "answerFactRefs": [
+        "research.facts[6]",
+        "research.conflicts[0]",
+        "serp:destructoid-codes",
+        "serp:progameguides-codes"
+      ],
+      "update recencyPolicy": {
+        "recheckSource": [
+          "Roblox experience page/API",
+          "SERP code competitors",
+          "content/code-items.json verified rows when created"
+        ],
+        "maxAgeHours": 24,
+        "staleAction": "Do not display an active-code table if source excerpts are older than 24 hours during launch week; fall back to redeem steps and last-checked conflict note."
+      },
+      "dataContract": {
+        "collectionId": "codes",
+        "requiredFields": [
+          "code",
+          "reward",
+          "status",
+          "sourceUrls",
+          "sourceExcerpt",
+          "checkedAt"
+        ],
+        "sources": [
+          "serp:destructoid-codes",
+          "serp:progameguides-codes",
+          "serp:gamerant-codes"
+        ],
+        "observedEntityCount": 3,
+        "missingFieldPolicy": "Only publish rows whose code string and reward appear in a saved source excerpt; otherwise omit active rows and keep redeem guidance.",
+        "publishGate": {
+          "passed": true,
+          "status": "passed",
+          "note": "SERP snippets contain row-level code/reward candidates; article generation must create content/code-items.json before rendering active table."
+        },
+        "entityEvidenceRefs": [
+          "serp:destructoid-codes",
+          "serp:progameguides-codes"
+        ]
+      },
+      "keywordPlacement": {
+        "title": "Fruit Zombie Survival Codes and Redeem Help",
+        "h1": "Fruit Zombie Survival Codes",
+        "quickAnswer": "Use this page for reported current codes, rewards, redeem steps, and code troubleshooting. Active rows must be backed by dated source excerpts and refreshed within the stated window."
+      }
+    },
+    {
+      "id": "start-here",
+      "title": "Fruit Zombie Survival Beginner Guide",
+      "url": "/start-here/",
+      "keyword": "Fruit Zombie Survival how to play",
+      "priority": "P0",
+      "intent": "How to play Fruit Zombie Survival, first-run loop, survival priorities, and what to do before chasing exact comparisons.",
+      "primaryIntent": "beginner how to play",
+      "pageType": "start-here",
+      "featureRole": "content",
+      "userTask": "Learn the first-run loop and safe early priorities before chasing exact best-fruit or best-build claims.",
+      "requiredEvidence": [
+        "Official gameplay loop: fruits, waves, boss encounters, Berries, builds, and co-op",
+        "Beginner/how-to demand from YouTube guide results",
+        "Unsupported exact stats/comparisons must be omitted or marked unknown"
+      ],
+      "requiredSections": [
+        "quick-answer",
+        "what-is-known",
+        "steps-or-decisions",
+        "source-notes",
+        "related-pages"
+      ],
+      "targetLength": "900-1400 words",
+      "evidenceRefs": [
+        {
+          "ref": "research.officialSources[0]",
+          "source": "research",
+          "text": "Official Roblox experience page confirms the game identity and public description: eat a Devil Fruit, 20 fruits, endless zombie waves, special boss encounters, One Piece-inspired builds, Berries, and co-op.",
+          "url": "https://www.roblox.com/games/75290583112878/Fruit-Zombie-Survival"
+        },
+        {
+          "ref": "research.officialSources[1]",
+          "source": "research",
+          "text": "Roblox API confirms universe 10654199482, root place 75290583112878, created and updated timestamps, and current released status.",
+          "url": "https://games.roblox.com/v1/games?universeIds=10654199482"
+        },
+        {
+          "ref": "youtube:46z26vvlO9E",
+          "source": "youtube",
+          "text": "4 NEW CODES & HOW TO PLAY! | Fruit Zombie Survival ROBLOX (September 10, 2026)",
+          "title": "4 NEW CODES & HOW TO PLAY! | Fruit Zombie Survival ROBLOX (September 10, 2026)",
+          "viewCount": 3715,
+          "videoId": "46z26vvlO9E",
+          "url": "https://www.youtube.com/watch?v=46z26vvlO9E"
+        },
+        {
+          "ref": "youtube:ot6bJimnVSE",
+          "source": "youtube",
+          "text": "How to Play Fruit Zombie Survival Roblox Full Guide",
+          "title": "How to Play Fruit Zombie Survival Roblox Full Guide",
+          "viewCount": 749,
+          "videoId": "ot6bJimnVSE",
+          "url": "https://www.youtube.com/watch?v=ot6bJimnVSE"
+        },
+        {
+          "ref": "youtube:yGS64d6hLJ4",
+          "source": "youtube",
+          "text": "Fruit Zombie Survival Roblox Best Way to Get Diamonds Fast for Beginners",
+          "title": "Fruit Zombie Survival Roblox Best Way to Get Diamonds Fast for Beginners",
+          "viewCount": 5001,
+          "videoId": "yGS64d6hLJ4",
+          "url": "https://www.youtube.com/watch?v=yGS64d6hLJ4"
+        }
+      ],
+      "evidenceStatus": "sufficient",
+      "generationStatus": "conservative",
+      "uniqueInformationDelta": [
+        "Beginner route uses gameplay-specific order: fruit first, waves/boss awareness, Berries for power, builds, then co-op decisions",
+        "Warns beginners not to chase exact fruit/build comparisons until page evidence supports those choices"
+      ],
+      "answerOutline": [
+        {
+          "heading": "Quick answer",
+          "questions": [
+            "Official gameplay loop: fruits, waves, boss encounters, Berries, builds, and co-op"
+          ],
+          "presentation": "prose",
+          "rationale": "Put the answer before explanation."
+        },
+        {
+          "heading": "Source-backed details",
+          "questions": [
+            "Official gameplay loop: fruits, waves, boss encounters, Berries, builds, and co-op",
+            "Beginner/how-to demand from YouTube guide results",
+            "Unsupported exact stats/comparisons must be omitted or marked unknown"
+          ],
+          "presentation": "steps",
+          "rationale": "Tie every material claim to the saved evidence boundary."
+        },
+        {
+          "heading": "Limits and next checks",
+          "questions": [
+            "Unsupported exact stats/comparisons must be omitted or marked unknown"
+          ],
+          "presentation": "cards",
+          "rationale": "Keep unsupported exact claims out of generation."
+        }
+      ],
+      "answerFactRefs": [
+        "research.facts[0]",
+        "research.facts[1]",
+        "research.facts[2]",
+        "research.facts[3]",
+        "youtube:46z26vvlO9E",
+        "youtube:ot6bJimnVSE"
+      ],
+      "keywordPlacement": {
+        "title": "Fruit Zombie Survival Beginner Guide",
+        "h1": "Fruit Zombie Survival Beginner Guide",
+        "quickAnswer": "The verified loop is to eat a Devil Fruit, survive zombie waves and boss encounters, use Berries for power, place One Piece-inspired builds, and use co-op when helpful."
+      },
+      "statusNotes": [
+        "Article generation pass: coverage entries are supported; exact stats/comparisons remain omitted."
+      ]
+    },
+    {
+      "id": "diamonds-berries",
+      "title": "Diamonds and Berries",
+      "url": "/diamonds-and-berries/",
+      "keyword": "Fruit Zombie Survival Diamonds and Berries",
+      "priority": "P1",
+      "intent": "Diamonds, Berries, rewards, farming paths and upgrade spending decisions.",
+      "primaryIntent": "currency farming and progression",
+      "pageType": "progression-guide",
+      "featureRole": "content",
+      "userTask": "Understand what is verified about Berries and Diamonds, where player demand points, and which farming claims still need exact evidence.",
+      "requiredEvidence": [
+        "Official Berries role in powering up during a run",
+        "YouTube demand for getting Diamonds fast",
+        "Exact rates, best methods, and reward amounts require page-level evidence"
+      ],
+      "requiredSections": [
+        "quick-answer",
+        "what-is-known",
+        "steps-or-decisions",
+        "source-notes",
+        "related-pages"
+      ],
+      "targetLength": "900-1400 words",
+      "evidenceRefs": [
+        {
+          "ref": "research.officialSources[0]",
+          "source": "research",
+          "text": "Official Roblox experience page confirms the game identity and public description: eat a Devil Fruit, 20 fruits, endless zombie waves, special boss encounters, One Piece-inspired builds, Berries, and co-op.",
+          "url": "https://www.roblox.com/games/75290583112878/Fruit-Zombie-Survival"
+        },
+        {
+          "ref": "research.officialSources[1]",
+          "source": "research",
+          "text": "Roblox API confirms universe 10654199482, root place 75290583112878, created and updated timestamps, and current released status.",
+          "url": "https://games.roblox.com/v1/games?universeIds=10654199482"
+        },
+        {
+          "ref": "youtube:yGS64d6hLJ4",
+          "source": "youtube",
+          "text": "Fruit Zombie Survival Roblox Best Way to Get Diamonds Fast for Beginners",
+          "title": "Fruit Zombie Survival Roblox Best Way to Get Diamonds Fast for Beginners",
+          "viewCount": 5001,
+          "videoId": "yGS64d6hLJ4",
+          "url": "https://www.youtube.com/watch?v=yGS64d6hLJ4"
+        },
+        {
+          "ref": "youtube:DvsSRJWfm-c",
+          "source": "youtube",
+          "text": "HOW TO FARM LOTS OF DIAMONDS FAST IN FRUIT ZOMBIE SURVIVAL! NEW ROBLOX GAME",
+          "title": "HOW TO FARM LOTS OF DIAMONDS FAST IN FRUIT ZOMBIE SURVIVAL! NEW ROBLOX GAME",
+          "viewCount": 4695,
+          "videoId": "DvsSRJWfm-c",
+          "url": "https://www.youtube.com/watch?v=DvsSRJWfm-c"
+        },
+        {
+          "ref": "youtube:n26DrIkfkXw",
+          "source": "youtube",
+          "text": "Fruit Zombie Survival GUIDE! (Best Classes, Get Diamonds Fast, Tips & Tricks) ROBLOX",
+          "title": "Fruit Zombie Survival GUIDE! (Best Classes, Get Diamonds Fast, Tips & Tricks) ROBLOX",
+          "viewCount": 875,
+          "videoId": "n26DrIkfkXw",
+          "url": "https://www.youtube.com/watch?v=n26DrIkfkXw"
+        },
+        {
+          "ref": "serp:gamerant-codes",
+          "source": "serp-competitors",
+          "text": "Game Rant Fruit Zombie Survival Codes result surfaced for code demand and basic game description.",
+          "url": "https://gamerant.com/fruit-zombie-survival-codes-roblox/"
+        },
+        {
+          "ref": "serp:destructoid-codes",
+          "source": "serp-competitors",
+          "text": "Destructoid snippet lists active Fruit Zombie Survival codes including VibeStarter, Up5ndc0ming, and Disc0rd with rewards; exact active status remains third-party and update recency-sensitive.",
+          "url": "https://www.destructoid.com/fruit-zombie-survival-codes/"
+        },
+        {
+          "ref": "serp:progameguides-codes",
+          "source": "serp-competitors",
+          "text": "Pro Game Guides current-month codes article covers Fruit Zombie Survival codes and redeem steps.",
+          "url": "https://progameguides.com/roblox/fruit-zombie-survival-codes/"
+        }
+      ],
+      "evidenceStatus": "sufficient",
+      "generationStatus": "conservative",
+      "uniqueInformationDelta": [
+        "Separates Berries as the officially described in-run power-up resource from Diamonds as video-demand farming topic",
+        "Blocks exact farming rates and best-method claims while still giving progression checks players can use"
+      ],
+      "answerOutline": [
+        {
+          "heading": "Quick answer",
+          "questions": [
+            "Official Berries role in powering up during a run"
+          ],
+          "presentation": "prose",
+          "rationale": "Put the answer before explanation."
+        },
+        {
+          "heading": "Source-backed details",
+          "questions": [
+            "Official Berries role in powering up during a run",
+            "YouTube demand for getting Diamonds fast",
+            "Exact rates, best methods, and reward amounts require page-level evidence"
+          ],
+          "presentation": "prose",
+          "rationale": "Tie every material claim to the saved evidence boundary."
+        },
+        {
+          "heading": "Limits and next checks",
+          "questions": [
+            "Exact rates, best methods, and reward amounts require page-level evidence"
+          ],
+          "presentation": "cards",
+          "rationale": "Keep unsupported exact claims out of generation."
+        }
+      ],
+      "answerFactRefs": [
+        "research.coreGameplay[3]",
+        "research.communityDemandSignals[3]",
+        "youtube:yGS64d6hLJ4",
+        "youtube:DvsSRJWfm-c"
+      ],
+      "keywordPlacement": {
+        "title": "Fruit Zombie Survival Diamonds and Berries Guide",
+        "h1": "Diamonds and Berries",
+        "quickAnswer": "Berries are officially tied to powering up during a run. Diamond farming has strong video demand, but exact rates and best routes need page-level evidence before publication."
+      },
+      "statusNotes": [
+        "Article generation pass: coverage entries are supported; exact stats/comparisons remain omitted."
+      ]
+    },
+    {
+      "id": "fruits",
+      "title": "Fruits Guide",
+      "url": "/fruits/",
+      "keyword": "Fruit Zombie Survival fruits",
+      "priority": "P1",
+      "intent": "All fruits foundation, fruit powers, source-backed choice guidance and future tier-list gate.",
+      "primaryIntent": "fruit lookup and choice guidance",
+      "pageType": "fruit-reference-guide",
+      "featureRole": "content",
+      "userTask": "Use the fruit page as a conservative choice guide: what the official source confirms, what videos imply, and what comparisons cannot be claimed yet.",
+      "requiredEvidence": [
+        "Official source confirms 20 fruits to collect",
+        "Gameplay/video evidence may mention specific fruit examples but cannot create a full tier list alone",
+        "Exact fruit names, powers, unlocks, and comparisons require entity-level evidence"
+      ],
+      "requiredSections": [
+        "quick-answer",
+        "what-is-known",
+        "steps-or-decisions",
+        "source-notes",
+        "related-pages"
+      ],
+      "targetLength": "900-1400 words",
+      "evidenceRefs": [
+        {
+          "ref": "research.officialSources[0]",
+          "source": "research",
+          "text": "Official Roblox experience page confirms the game identity and public description: eat a Devil Fruit, 20 fruits, endless zombie waves, special boss encounters, One Piece-inspired builds, Berries, and co-op.",
+          "url": "https://www.roblox.com/games/75290583112878/Fruit-Zombie-Survival"
+        },
+        {
+          "ref": "research.officialSources[1]",
+          "source": "research",
+          "text": "Roblox API confirms universe 10654199482, root place 75290583112878, created and updated timestamps, and current released status.",
+          "url": "https://games.roblox.com/v1/games?universeIds=10654199482"
+        },
+        {
+          "ref": "youtube:Jb5KgvS1ebQ",
+          "source": "youtube",
+          "text": "I Unleashed ENEL’S FULL POWER! Lightning Devil Fruit + Enel Class Gameplay | Fruit Zombie Survival",
+          "title": "I Unleashed ENEL’S FULL POWER! Lightning Devil Fruit + Enel Class Gameplay | Fruit Zombie Survival",
+          "viewCount": 387,
+          "videoId": "Jb5KgvS1ebQ",
+          "url": "https://www.youtube.com/watch?v=Jb5KgvS1ebQ"
+        },
+        {
+          "ref": "youtube:_M2zYLpBdo0",
+          "source": "youtube",
+          "text": "i got ice fruit in this new roblox game | fruit zombie survival roblox gameplay",
+          "title": "i got ice fruit in this new roblox game | fruit zombie survival roblox gameplay",
+          "viewCount": 1,
+          "videoId": "_M2zYLpBdo0",
+          "url": "https://www.youtube.com/watch?v=_M2zYLpBdo0"
+        }
+      ],
+      "evidenceStatus": "sufficient",
+      "generationStatus": "conservative",
+      "uniqueInformationDelta": [
+        "Publishes the confirmed 20-fruit foundation without inventing a complete fruit list for gameplay decisions",
+        "Uses video titles only as examples of fruit-interest evidence, not as proof of stats or comparisons for gameplay decisions"
+      ],
+      "answerOutline": [
+        {
+          "heading": "Quick answer",
+          "questions": [
+            "Official source confirms 20 fruits to collect"
+          ],
+          "presentation": "prose",
+          "rationale": "Put the answer before explanation."
+        },
+        {
+          "heading": "Source-backed details",
+          "questions": [
+            "Official source confirms 20 fruits to collect",
+            "Gameplay/video evidence may mention specific fruit examples but cannot create a full tier list alone",
+            "Exact fruit names, powers, unlocks, and comparisons require entity-level evidence"
+          ],
+          "presentation": "prose",
+          "rationale": "Tie every material claim to the saved evidence boundary."
+        },
+        {
+          "heading": "Limits and next checks",
+          "questions": [
+            "Exact fruit names, powers, unlocks, and comparisons require entity-level evidence"
+          ],
+          "presentation": "cards",
+          "rationale": "Keep unsupported exact claims out of generation."
+        }
+      ],
+      "answerFactRefs": [
+        "research.coreGameplay[0]",
+        "youtube:Jb5KgvS1ebQ",
+        "youtube:_M2zYLpBdo0"
+      ],
+      "keywordPlacement": {
+        "title": "Fruit Zombie Survival Fruits Guide",
+        "h1": "Fruit Zombie Survival Fruits",
+        "quickAnswer": "The official source confirms 20 collectible fruits. Publish beginner choice guidance conservatively until fruit names, powers, unlocks, and comparisons have entity-level evidence."
+      },
+      "statusNotes": [
+        "Article generation pass: coverage entries are supported; exact stats/comparisons remain omitted."
+      ]
+    },
+    {
+      "id": "builds",
+      "title": "Builds and Classes",
+      "url": "/builds/",
+      "keyword": "Fruit Zombie Survival builds",
+      "priority": "P1",
+      "intent": "Character build/class placement basics, source-backed build roles and beginner choices.",
+      "primaryIntent": "build and class guidance",
+      "pageType": "build-guide",
+      "featureRole": "content",
+      "userTask": "Understand verified build/class placement basics and beginner choice boundaries without unsupported class comparisons.",
+      "requiredEvidence": [
+        "Official source confirms One Piece-inspired character builds can be placed",
+        "YouTube guide demand mentions best classes and tips",
+        "Build names, synergies, and comparisons need page-level evidence"
+      ],
+      "requiredSections": [
+        "quick-answer",
+        "what-is-known",
+        "steps-or-decisions",
+        "source-notes",
+        "related-pages"
+      ],
+      "targetLength": "900-1400 words",
+      "evidenceRefs": [
+        {
+          "ref": "research.officialSources[0]",
+          "source": "research",
+          "text": "Official Roblox experience page confirms the game identity and public description: eat a Devil Fruit, 20 fruits, endless zombie waves, special boss encounters, One Piece-inspired builds, Berries, and co-op.",
+          "url": "https://www.roblox.com/games/75290583112878/Fruit-Zombie-Survival"
+        },
+        {
+          "ref": "research.officialSources[1]",
+          "source": "research",
+          "text": "Roblox API confirms universe 10654199482, root place 75290583112878, created and updated timestamps, and current released status.",
+          "url": "https://games.roblox.com/v1/games?universeIds=10654199482"
+        },
+        {
+          "ref": "youtube:n26DrIkfkXw",
+          "source": "youtube",
+          "text": "Fruit Zombie Survival GUIDE! (Best Classes, Get Diamonds Fast, Tips & Tricks) ROBLOX",
+          "title": "Fruit Zombie Survival GUIDE! (Best Classes, Get Diamonds Fast, Tips & Tricks) ROBLOX",
+          "viewCount": 875,
+          "videoId": "n26DrIkfkXw",
+          "url": "https://www.youtube.com/watch?v=n26DrIkfkXw"
+        },
+        {
+          "ref": "youtube:Jb5KgvS1ebQ",
+          "source": "youtube",
+          "text": "Enel class gameplay appears in a community video title; treat as candidate evidence, not a complete class database.",
+          "title": "I Unleashed ENEL’S FULL POWER! Lightning Devil Fruit + Enel Class Gameplay | Fruit Zombie Survival",
+          "viewCount": 387,
+          "videoId": "Jb5KgvS1ebQ",
+          "url": "https://www.youtube.com/watch?v=Jb5KgvS1ebQ"
+        }
+      ],
+      "evidenceStatus": "sufficient",
+      "generationStatus": "conservative",
+      "uniqueInformationDelta": [
+        "Defines builds as the verified placed-character system instead of a fabricated tier list for gameplay decisions",
+        "Separates beginner role guidance from unverified names, synergies, and comparisons for gameplay decisions"
+      ],
+      "answerOutline": [
+        {
+          "heading": "Quick answer",
+          "questions": [
+            "Official source confirms One Piece-inspired character builds can be placed"
+          ],
+          "presentation": "prose",
+          "rationale": "Put the answer before explanation."
+        },
+        {
+          "heading": "Source-backed details",
+          "questions": [
+            "Official source confirms One Piece-inspired character builds can be placed",
+            "YouTube guide demand mentions best classes and tips",
+            "Build names, synergies, and comparisons need page-level evidence"
+          ],
+          "presentation": "prose",
+          "rationale": "Tie every material claim to the saved evidence boundary."
+        },
+        {
+          "heading": "Limits and next checks",
+          "questions": [
+            "Build names, synergies, and comparisons need page-level evidence"
+          ],
+          "presentation": "cards",
+          "rationale": "Keep unsupported exact claims out of generation."
+        }
+      ],
+      "answerFactRefs": [
+        "research.coreGameplay[2]",
+        "youtube:n26DrIkfkXw",
+        "youtube:Jb5KgvS1ebQ"
+      ],
+      "keywordPlacement": {
+        "title": "Fruit Zombie Survival Builds and Classes",
+        "h1": "Builds and Classes",
+        "quickAnswer": "The official source confirms One Piece-inspired character builds that can be placed. Build names, synergies, and comparisons remain evidence-gated."
+      },
+      "statusNotes": [
+        "Article generation pass: coverage entries are supported; exact stats/comparisons remain omitted."
+      ]
+    },
+    {
+      "id": "boss encounters",
+      "title": "boss encounters",
+      "url": "/bosses/",
+      "keyword": "Fruit Zombie Survival boss encounters",
+      "priority": "P1",
+      "intent": "boss encounters, waves, survival checks and co-op preparation.",
+      "primaryIntent": "boss and wave survival",
+      "pageType": "boss-wave-guide",
+      "featureRole": "content",
+      "userTask": "Prepare for waves and special boss encounters using confirmed foundations while leaving boss names, timings, and drops gated.",
+      "requiredEvidence": [
+        "Official source confirms endless zombie waves and special boss encounters",
+        "Beginner survival videos support boss/wave preparation demand",
+        "Boss names, timings, drops, and exact counters need page-level evidence"
+      ],
+      "requiredSections": [
+        "quick-answer",
+        "what-is-known",
+        "steps-or-decisions",
+        "source-notes",
+        "related-pages"
+      ],
+      "targetLength": "900-1400 words",
+      "evidenceRefs": [
+        {
+          "ref": "research.officialSources[0]",
+          "source": "research",
+          "text": "Official Roblox experience page confirms the game identity and public description: eat a Devil Fruit, 20 fruits, endless zombie waves, special boss encounters, One Piece-inspired builds, Berries, and co-op.",
+          "url": "https://www.roblox.com/games/75290583112878/Fruit-Zombie-Survival"
+        },
+        {
+          "ref": "research.officialSources[1]",
+          "source": "research",
+          "text": "Roblox API confirms universe 10654199482, root place 75290583112878, created and updated timestamps, and current released status.",
+          "url": "https://games.roblox.com/v1/games?universeIds=10654199482"
+        },
+        {
+          "ref": "youtube:46z26vvlO9E",
+          "source": "youtube",
+          "text": "4 NEW CODES & HOW TO PLAY! | Fruit Zombie Survival ROBLOX (September 10, 2026)",
+          "title": "4 NEW CODES & HOW TO PLAY! | Fruit Zombie Survival ROBLOX (September 10, 2026)",
+          "viewCount": 3715,
+          "videoId": "46z26vvlO9E",
+          "url": "https://www.youtube.com/watch?v=46z26vvlO9E"
+        },
+        {
+          "ref": "youtube:ot6bJimnVSE",
+          "source": "youtube",
+          "text": "How to Play Fruit Zombie Survival Roblox Full Guide",
+          "title": "How to Play Fruit Zombie Survival Roblox Full Guide",
+          "viewCount": 749,
+          "videoId": "ot6bJimnVSE",
+          "url": "https://www.youtube.com/watch?v=ot6bJimnVSE"
+        },
+        {
+          "ref": "youtube:WVzkK7y5oRk",
+          "source": "youtube",
+          "text": "Fruit zombie survival gameplay",
+          "title": "Fruit zombie survival gameplay",
+          "viewCount": 1087,
+          "videoId": "WVzkK7y5oRk",
+          "url": "https://www.youtube.com/watch?v=WVzkK7y5oRk"
+        }
+      ],
+      "evidenceStatus": "sufficient",
+      "generationStatus": "conservative",
+      "uniqueInformationDelta": [
+        "Gives preparation checks for wave survival without inventing boss tables for gameplay decisions",
+        "Makes co-op and build/fruit preparation explicit as decisions players can act on for gameplay decisions"
+      ],
+      "answerOutline": [
+        {
+          "heading": "Quick answer",
+          "questions": [
+            "Official source confirms endless zombie waves and special boss encounters"
+          ],
+          "presentation": "prose",
+          "rationale": "Put the answer before explanation."
+        },
+        {
+          "heading": "Source-backed details",
+          "questions": [
+            "Official source confirms endless zombie waves and special boss encounters",
+            "Beginner survival videos support boss/wave preparation demand",
+            "Boss names, timings, drops, and exact counters need page-level evidence"
+          ],
+          "presentation": "prose",
+          "rationale": "Tie every material claim to the saved evidence boundary."
+        },
+        {
+          "heading": "Limits and next checks",
+          "questions": [
+            "Boss names, timings, drops, and exact counters need page-level evidence"
+          ],
+          "presentation": "cards",
+          "rationale": "Keep unsupported exact claims out of generation."
+        }
+      ],
+      "answerFactRefs": [
+        "research.coreGameplay[1]",
+        "research.coreGameplay[4]",
+        "youtube:WVzkK7y5oRk"
+      ],
+      "keywordPlacement": {
+        "title": "Fruit Zombie Survival boss encounters",
+        "h1": "boss encounters",
+        "quickAnswer": "The official source confirms endless zombie waves and special boss encounters. Publish preparation guidance without inventing names, timings, drops, or counters."
+      },
+      "statusNotes": [
+        "Article generation pass: coverage entries are supported; exact stats/comparisons remain omitted."
+      ]
+    },
+    {
+      "id": "updates",
+      "title": "Updates and Artifacts",
+      "url": "/updates/",
+      "keyword": "Fruit Zombie Survival updates",
+      "priority": "P1",
+      "intent": "Roblox update timestamp, Artifacts event naming, code refreshes and guide update recency.",
+      "primaryIntent": "update tracking",
+      "pageType": "update-status",
+      "featureRole": "content",
+      "userTask": "Check the latest Roblox update timestamp, Artifacts title state, and what should trigger guide/code rechecks.",
+      "requiredEvidence": [
+        "Roblox API updated timestamp and current displayed title/event prefix",
+        "Code/update SERP update recency and conflict signals",
+        "Clear recheck policy for stale code and guide claims"
+      ],
+      "requiredSections": [
+        "quick-answer",
+        "what-is-known",
+        "steps-or-decisions",
+        "source-notes",
+        "related-pages"
+      ],
+      "targetLength": "900-1400 words",
+      "evidenceRefs": [
+        {
+          "ref": "research.officialSources[0]",
+          "source": "research",
+          "text": "Official Roblox experience page confirms the game identity and public description: eat a Devil Fruit, 20 fruits, endless zombie waves, special boss encounters, One Piece-inspired builds, Berries, and co-op.",
+          "url": "https://www.roblox.com/games/75290583112878/Fruit-Zombie-Survival"
+        },
+        {
+          "ref": "research.officialSources[1]",
+          "source": "research",
+          "text": "Roblox API confirms universe 10654199482, root place 75290583112878, created and updated timestamps, and current released status.",
+          "url": "https://games.roblox.com/v1/games?universeIds=10654199482"
+        },
+        {
+          "ref": "serp:gamerant-codes",
+          "source": "serp-competitors",
+          "text": "Game Rant Fruit Zombie Survival Codes result surfaced for code demand and basic game description.",
+          "url": "https://gamerant.com/fruit-zombie-survival-codes-roblox/"
+        },
+        {
+          "ref": "serp:destructoid-codes",
+          "source": "serp-competitors",
+          "text": "Destructoid snippet lists active Fruit Zombie Survival codes including VibeStarter, Up5ndc0ming, and Disc0rd with rewards; exact active status remains third-party and update recency-sensitive.",
+          "url": "https://www.destructoid.com/fruit-zombie-survival-codes/"
+        },
+        {
+          "ref": "serp:progameguides-codes",
+          "source": "serp-competitors",
+          "text": "Pro Game Guides current-month codes article covers Fruit Zombie Survival codes and redeem steps.",
+          "url": "https://progameguides.com/roblox/fruit-zombie-survival-codes/"
+        }
+      ],
+      "evidenceStatus": "sufficient",
+      "generationStatus": "update-required",
+      "uniqueInformationDelta": [
+        "Tracks the verified Artifacts prefix and Roblox API updated timestamp as update signals",
+        "Explains when pages need recheck without claiming full patch notes that were not found"
+      ],
+      "answerOutline": [
+        {
+          "heading": "Quick answer",
+          "questions": [
+            "Roblox API updated timestamp and current displayed title/event prefix"
+          ],
+          "presentation": "prose",
+          "rationale": "Put the answer before explanation."
+        },
+        {
+          "heading": "Source-backed details",
+          "questions": [
+            "Roblox API updated timestamp and current displayed title/event prefix",
+            "Code/update SERP update recency and conflict signals",
+            "Clear recheck policy for stale code and guide claims"
+          ],
+          "presentation": "prose",
+          "rationale": "Tie every material claim to the saved evidence boundary."
+        },
+        {
+          "heading": "Limits and next checks",
+          "questions": [
+            "Clear recheck policy for stale code and guide claims"
+          ],
+          "presentation": "cards",
+          "rationale": "Keep unsupported exact claims out of generation."
+        }
+      ],
+      "answerFactRefs": [
+        "research.facts[0]",
+        "research.facts[3]",
+        "research.conflicts[0]"
+      ],
+      "update recencyPolicy": {
+        "recheckSource": [
+          "Roblox games API universe 10654199482",
+          "Roblox experience title",
+          "SERP code competitors"
+        ],
+        "maxAgeHours": 24,
+        "staleAction": "Mark update/code claims stale and queue article evidence refresh when Roblox updated timestamp, event prefix, or top code competitors change."
+      },
+      "keywordPlacement": {
+        "title": "Fruit Zombie Survival Updates and Artifacts Tracker",
+        "h1": "Updates and Artifacts",
+        "quickAnswer": "Roblox evidence currently supports an Artifacts title prefix and a September 12, 2026 API update timestamp; code and guide claims must be rechecked when these signals change."
+      }
+    }
+  ],
+  "research": {
+    "topic": {
+      "canonicalName": "Fruit Zombie Survival",
+      "domain": "fruit-zombie-survival-game.wiki",
+      "type": "Roblox game"
+    },
+    "game": {},
+    "officialSources": [
+      {
+        "name": "Roblox experience page",
+        "url": "https://www.roblox.com/games/75290583112878/Fruit-Zombie-Survival",
+        "publisher": "Roblox",
+        "observedAt": "2026-09-12T12:45:00Z",
+        "notes": "Official public game page for placeId 75290583112878; page title currently uses the event prefix [Artifacts]."
+      },
+      {
+        "name": "Roblox games API",
+        "url": "https://games.roblox.com/v1/games?universeIds=10654199482",
+        "publisher": "Roblox",
+        "observedAt": "2026-09-12T12:45:00Z",
+        "notes": "Public Roblox API record for universeId 10654199482, converted from placeId 75290583112878."
+      },
+      {
+        "name": "Vibed Games Roblox community",
+        "url": "https://www.roblox.com/communities/35247239",
+        "publisher": "Roblox",
+        "observedAt": "2026-09-12T12:45:00Z",
+        "notes": "Creator linked from the official Roblox experience page and API."
+      }
+    ],
+    "verifiedFacts": [
+      {
+        "claim": "The verified game is a Roblox experience named Fruit Zombie Survival, currently displayed as [Artifacts] Fruit Zombie Survival.",
+        "status": "confirmed",
+        "sources": [
+          "https://www.roblox.com/games/75290583112878/Fruit-Zombie-Survival",
+          "https://games.roblox.com/v1/games?universeIds=10654199482"
+        ]
+      },
+      {
+        "claim": "The creator is Vibed Games, Roblox group id 35247239.",
+        "status": "confirmed",
+        "sources": [
+          "https://www.roblox.com/games/75290583112878/Fruit-Zombie-Survival",
+          "https://games.roblox.com/v1/games?universeIds=10654199482"
+        ]
+      },
+      {
+        "claim": "The Roblox root place id is 75290583112878 and universe id is 10654199482.",
+        "status": "confirmed",
+        "sources": [
+          "https://apis.roblox.com/universes/v1/places/75290583112878/universe",
+          "https://games.roblox.com/v1/games?universeIds=10654199482"
+        ]
+      },
+      {
+        "claim": "Roblox API reports created=2026-08-08T09:14:40.02Z and updated=2026-09-12T11:08:12.1720303Z.",
+        "status": "confirmed",
+        "sources": [
+          "https://games.roblox.com/v1/games?universeIds=10654199482"
+        ]
+      },
+      {
+        "claim": "Roblox API reports 3,749,931 visits, 8,495 playing, 34,161 favorites, and 8,501 upvotes / 601 downvotes at observation time.",
+        "status": "confirmed",
+        "sources": [
+          "https://games.roblox.com/v1/games?universeIds=10654199482",
+          "https://games.roblox.com/v1/games/votes?universeIds=10654199482"
+        ]
+      },
+      {
+        "claim": "The game is free to play on Roblox; Roblox JSON-LD lists price 0 ROBUX.",
+        "status": "confirmed",
+        "sources": [
+          "https://www.roblox.com/games/75290583112878/Fruit-Zombie-Survival"
+        ]
+      },
+      {
+        "claim": "Third-party guides report active codes in September 2026, but code validity is not confirmed by an official source in this research pass.",
+        "status": "conflicting",
+        "sources": [
+          "https://progameguides.com/roblox/fruit-zombie-survival-codes/",
+          "https://www.destructoid.com/fruit-zombie-survival-codes-september-2026/",
+          "https://fruitzombiesurvival.wiki/es/codes/"
+        ]
+      }
+    ],
+    "knownEntities": []
+  }
+}

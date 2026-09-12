@@ -1,0 +1,20 @@
+{
+  "name": "Fruit Zombie Survival",
+  "short_name": "Fruit Zombie Survival",
+  "description": "Help players decide what to do now in Fruit Zombie Survival: redeem current rewards, survive early waves, choose fruits/builds, farm currencies, handle bosses, and understand updates.",
+  "icons": [
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#2fc657",
+  "background_color": "#0f1a14",
+  "display": "standalone"
+}

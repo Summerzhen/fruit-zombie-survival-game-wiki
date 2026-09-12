@@ -1,0 +1,21 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "fruit-zombie-survival-game-wiki",
+  "main": "./src/worker.ts",
+  "compatibility_date": "2026-08-15",
+  "compatibility_flags": ["nodejs_compat"],
+  "assets": {
+    "directory": "./out",
+    "binding": "ASSETS",
+    "run_worker_first": true,
+    "html_handling": "force-trailing-slash",
+    "not_found_handling": "404-page"
+  },
+  "routes": [
+    { "pattern": "fruit-zombie-survival-game.wiki/*", "zone_name": "fruit-zombie-survival-game.wiki" },
+    { "pattern": "www.fruit-zombie-survival-game.wiki/*", "zone_name": "fruit-zombie-survival-game.wiki" }
+  ],
+  "observability": {
+    "enabled": true
+  }
+}
