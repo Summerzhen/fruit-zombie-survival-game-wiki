@@ -101,7 +101,8 @@ export async function SiteFooter({ locale }: { locale: string }) {
   const nav = getStaticNamespace(locale, "nav") as Record<string, string>;
   const externalLinks = GAME_SITE_CONFIG.externalLinks.map(link => [footer[link.labelKey], link.href]);
   if (GAME_SITE_CONFIG.platform.playUrl) externalLinks.unshift([footer.playGame, GAME_SITE_CONFIG.platform.playUrl]);
-  const guideLinks = NAVIGATION_CONFIG.map(item => [nav[item.key], localizeHref(item.path, locale)]);
+  const guideLinks = NAVIGATION_CONFIG.map(item => [nav[item.key] ?? item.label, localizeHref(item.path, locale)]);
+  const legalLinks = [[footer.aboutTitle, localizeHref("/about/", locale)], [footer.privacyPolicy, localizeHref("/privacy-policy/", locale)], [footer.termsOfService, localizeHref("/terms-of-service/", locale)]];
   const sourceLinks = [
     ["Roblox game page", "https://www.roblox.com/games/75290583112878/Fruit-Zombie-Survival"],
     ["Roblox games API", "https://games.roblox.com/v1/games?universeIds=10654199482"],
@@ -110,7 +111,7 @@ export async function SiteFooter({ locale }: { locale: string }) {
     ["YouTube guide result", "https://www.youtube.com/watch?v=46z26vvlO9E"],
     ["YouTube beginner guide", "https://www.youtube.com/watch?v=ot6bJimnVSE"],
   ];
-  return <footer className="relative mt-20 border-t border-border bg-card/45"><div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8"><div className="archive-panel mb-8 border border-border bg-card/70 p-6 sm:p-8"><div className="font-display text-3xl font-bold">{site.name}</div><p className="mt-3 max-w-2xl leading-7 text-muted-foreground">{footer.description}</p></div><p className="mb-8 text-xs text-muted-foreground">{site.legalNotice}</p><div className="grid gap-8 border-y border-border py-8 md:grid-cols-4"><div><h3 className="font-editorial text-2xl font-semibold">{footer.aboutTitle}</h3><p className="mt-3 text-sm leading-7 text-muted-foreground">{footer.about}</p></div>{externalLinks.length > 0 && <FooterList title={footer.quickLinks} links={externalLinks} />}{guideLinks.length > 0 && <FooterList title={footer.guides} links={guideLinks} />}<ExternalFooterList title="Sources" links={sourceLinks} /></div><p className="mt-8 text-xs text-muted-foreground">{footer.copyright}</p></div></footer>;
+  return <footer className="relative mt-20 border-t border-border bg-card/45"><div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8"><div className="archive-panel mb-8 border border-border bg-card/70 p-6 sm:p-8"><div className="font-display text-3xl font-bold">{site.name}</div><p className="mt-3 max-w-2xl leading-7 text-muted-foreground">{footer.description}</p></div><p className="mb-8 text-xs text-muted-foreground">{site.legalNotice}</p><div className="grid gap-8 border-y border-border py-8 md:grid-cols-5"><div><h3 className="font-editorial text-2xl font-semibold">{footer.aboutTitle}</h3><p className="mt-3 text-sm leading-7 text-muted-foreground">{footer.about}</p></div><FooterList title="Legal" links={legalLinks} />{externalLinks.length > 0 && <FooterList title={footer.quickLinks} links={externalLinks} />}{guideLinks.length > 0 && <FooterList title={footer.guides} links={guideLinks} />}<ExternalFooterList title="Sources" links={sourceLinks} /></div><p className="mt-8 text-xs text-muted-foreground">{footer.copyright}</p></div></footer>;
 }
 
 function FooterList({ title, links }: { title: string; links: string[][] }) { return <div><h4 className="font-semibold text-foreground">{title}</h4><ul className="mt-3 space-y-2 text-sm text-muted-foreground">{links.map(([label, href]) => <li key={href}><Link className="hover:text-foreground" href={href}>{label}</Link></li>)}</ul></div>; }
