@@ -22,8 +22,8 @@ export async function SiteHeader({ locale, searchItems }: { locale: string; sear
   const nav = getStaticNamespace(locale, "nav") as Record<string, string>;
   const site = getStaticNamespace(locale, "site") as Record<string, string>;
   const footer = getStaticNamespace(locale, "footer") as Record<string, string>;
-  const t = (key: string) => nav[key] ?? key;
-  const links = NAVIGATION_CONFIG.map(item => <Link key={item.key} href={localizeHref(item.path, locale)} className="rounded-lg px-3 py-3 text-sm font-semibold hover:bg-muted">{t(item.key)}</Link>);
+  const t = (key: string, fallback?: string) => nav[key] ?? fallback ?? key;
+  const links = NAVIGATION_CONFIG.map(item => <Link key={item.key} href={localizeHref(item.path, locale)} className="rounded-lg px-3 py-3 text-sm font-semibold hover:bg-muted">{t(item.key, item.label)}</Link>);
   return <><header className="sticky top-0 z-50 border-b border-border bg-background/95 backdrop-blur-xl"><div className="mx-auto max-w-[88rem] px-4 sm:px-6 lg:px-8">
     <div className="flex min-h-16 min-w-0 flex-wrap items-center justify-between gap-3 py-3 sm:flex-nowrap">
       <Link href={localizeHref("/", locale)} className="flex min-w-0 items-center gap-3"><img src={GAME_SITE_CONFIG.media.icon} alt="" className="h-10 w-10 shrink-0 object-contain" /><span className="font-display min-w-0 break-words text-lg font-bold sm:text-2xl">{site.name}</span></Link>

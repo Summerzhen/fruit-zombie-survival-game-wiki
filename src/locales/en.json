@@ -15,7 +15,7 @@
     "home": "Home",
     "menu": "Menu",
     "toggleTheme": "Toggle theme",
-    "start-here": "Beginner Guide",
+    "start-here": "Start Here",
     "builds": "Builds",
     "codes": "Codes",
     "diamonds-and-berries": "Diamonds And Berries",
@@ -34,8 +34,8 @@
     },
     "hero": {
       "title": "Fruit Zombie Survival",
-      "description": "Start from codes and updates if you are returning, or use the beginner and progression routes if you are new. Exact code validity, rates, comparisons, and entity tables stay source-gated.",
-      "primaryCta": "Check Codes and Updates",
+      "description": "Redeem reported codes, choose your first route, compare fruits and builds, farm Berries carefully, and check updates before each run. Every volatile claim is dated so players can see what is confirmed and what still needs in-game proof.",
+      "primaryCta": "Redeem Codes",
       "primaryHref": "/codes/"
     },
     "faq": {
@@ -51,14 +51,17 @@
     },
     "aboutGame": {
       "title": "About Fruit Zombie Survival",
-      "paragraphs": [],
+      "paragraphs": [
+        "Fruit Zombie Survival is a Roblox wave-survival experience by Vibed Games. This wiki is organized around the decisions players make before and during a run: check rewards, learn the first survival loop, test fruit powers, pair them with builds, and avoid treating old update notes as permanent truth.",
+        "Use Codes before a session, Start Here during your first runs, Fruits and Builds when a power path feels weak, Diamonds and Berries when you are deciding where to spend effort, and Elite Waves when regular wave advice stops being enough. Each page keeps volatile claims dated so new players can separate confirmed Roblox facts from reported guide coverage."
+      ],
       "stats": [],
       "cta": "Check Codes and Updates"
     },
     "finalCta": {
-      "title": "Check Codes and Updates",
-      "description": "Help players decide what to do now in Fruit Zombie Survival: redeem current rewards, survive early waves, choose fruits/builds, farm currencies, handle boss encounters, and understand updates.",
-      "primary": "Check Codes and Updates",
+      "title": "Start with codes, then survive longer",
+      "description": "Check reported rewards first, then use Start Here, Fruits, Builds, Currencies, and Elite Waves to plan one practical improvement for the next run.",
+      "primary": "Redeem Codes",
       "secondary": "Play",
       "primaryHref": "/codes/"
     },
@@ -75,7 +78,7 @@
     },
     "explore": {
       "title": "Fruit Zombie Survival Modules",
-      "description": "Browse key topics for Fruit Zombie Survival. Start with the route that matches your task, then verify dated details before treating rewards, rates, comparisons, or entity rows as current. Keep a clear note of what was observed in the current build and what still needs a direct source before becoming a table or recommendation.",
+      "description": "Pick the task you need before loading into Roblox: redeem rewards, survive early waves, compare fruits and builds, farm Diamonds and Berries, or prepare for elite waves. Pages separate confirmed Roblox facts from reported guide claims so you know what to trust.",
       "modules": [],
       "searchLabel": "Search pages",
       "allLabel": "All pages",
@@ -84,8 +87,8 @@
   },
   "footer": {
     "aboutTitle": "Fruit Zombie Survival Wiki",
-    "about": "Fruit Zombie Survival Wiki is an independent fan guide site.",
-    "description": "Help players decide what to do now in Fruit Zombie Survival: redeem current rewards, survive early waves, choose fruits/builds, farm currencies, handle boss encounters, and understand updates.",
+    "about": "Independent fan guide with dated checks and confirmed Roblox evidence.",
+    "description": "Redeem rewards, survive waves, compare fruits/builds, farm currencies, handle elite waves, and check updates.",
     "quickLinks": "Guides",
     "guides": "Guides",
     "playGame": "Play now",
@@ -219,7 +222,7 @@
         "href": "/codes/"
       },
       {
-        "label": "Beginner Guide",
+        "label": "Start Here",
         "href": "/start-here/"
       },
       {
@@ -235,8 +238,8 @@
         "href": "/diamonds-and-berries/"
       },
       {
-        "label": "boss encounters",
-        "href": "/elite waves/"
+        "label": "Elite Waves",
+        "href": "/elite-waves/"
       },
       {
         "label": "Updates",
