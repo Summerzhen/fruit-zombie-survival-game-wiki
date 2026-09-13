@@ -86,7 +86,7 @@ export const GAME_SITE_CONFIG = {
   brand: {"name": "Fruit Zombie Survival", "mobileName": "Fruit Zombie Survival", "wikiName": "Fruit Zombie Survival", "tagline": "", "archiveId": ""},
   platform: {"name": "Roblox", "playUrl": "https://www.roblox.com/games/75290583112878/Fruit-Zombie-Survival"},
   media: {"icon": "/android-chrome-192x192.png", "logo": "/android-chrome-512x512.png", "hero": "", "socialImage": "/android-chrome-512x512.png", "trailerVideoId": ""},
-  paths: {"guides": "", "codes": "/codes/", "featuredCodes": "", "primaryCategory": "", "bosses": "/bosses/", "builds": "/builds/", "beginner": "/codes/"},
+  paths: {"guides": "", "codes": "/codes/", "featuredCodes": "", "primaryCategory": "", "bosses": "/bosses/", "builds": "/builds/", "beginner": "/start-here/"},
   externalLinks: [] as Array<{labelKey: string; href: string}>,
   contentModules: [{"key": "start-here", "slug": "start-here", "icon": "book", "navigationGroup": "primary", "enabled": true}, {"key": "bosses", "slug": "bosses", "icon": "book", "navigationGroup": "primary", "enabled": true}, {"key": "builds", "slug": "builds", "icon": "book", "navigationGroup": "primary", "enabled": true}, {"key": "codes", "slug": "codes", "icon": "book", "navigationGroup": "primary", "enabled": true}, {"key": "diamonds-and-berries", "slug": "diamonds-and-berries", "icon": "book", "navigationGroup": "primary", "enabled": true}, {"key": "fruits", "slug": "fruits", "icon": "book", "navigationGroup": "primary", "enabled": true}, {"key": "updates", "slug": "updates", "icon": "book", "navigationGroup": "primary", "enabled": true}] as Array<{key: string; slug: string; icon: "book"; navigationGroup: "primary"; enabled: boolean}>,
   liveModule: {

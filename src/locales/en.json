@@ -9,7 +9,7 @@
     "discordUrl": "",
     "youtubeUrl": "",
     "communityToolUrl": "",
-    "primaryGuideHref": "/codes/"
+    "primaryGuideHref": "/start-here/"
   },
   "nav": {
     "home": "Home",
@@ -34,9 +34,9 @@
     },
     "hero": {
       "title": "Fruit Zombie Survival",
-      "description": "Redeem reported codes, choose your first route, compare fruits and builds, farm Berries carefully, and check updates before each run. Every volatile claim is dated so players can see what is confirmed and what still needs in-game proof.",
-      "primaryCta": "Redeem Codes",
-      "primaryHref": "/codes/"
+      "description": "Start with the first-run route, then check reported codes, compare fruits and builds, farm Berries carefully, and review updates before each run. Every volatile claim is dated so players can see what is confirmed and what still needs in-game proof.",
+      "primaryCta": "Start Here",
+      "primaryHref": "/start-here/"
     },
     "faq": {
       "enabled": false,
@@ -46,7 +46,7 @@
     },
     "start": {
       "eyebrow": "Start",
-      "title": "Check Codes and Updates",
+      "title": "Start Here, Then Check Codes",
       "cards": []
     },
     "aboutGame": {
@@ -56,14 +56,14 @@
         "Use Codes before a session, Start Here during your first runs, Fruits and Builds when a power path feels weak, Diamonds and Berries when you are deciding where to spend effort, and Elite Waves when regular wave advice stops being enough. Each page keeps volatile claims dated so new players can separate confirmed Roblox facts from reported guide coverage."
       ],
       "stats": [],
-      "cta": "Check Codes and Updates"
+      "cta": "Start Here"
     },
     "finalCta": {
-      "title": "Start with codes, then survive longer",
-      "description": "Check reported rewards first, then use Start Here, Fruits, Builds, Currencies, and Elite Waves to plan one practical improvement for the next run.",
-      "primary": "Redeem Codes",
+      "title": "Start here, then survive longer",
+      "description": "Use Start Here for the first-run route, then check reported rewards, Fruits, Builds, Currencies, and Elite Waves to plan one practical improvement for the next run.",
+      "primary": "Start Here",
       "secondary": "Play",
-      "primaryHref": "/codes/"
+      "primaryHref": "/start-here/"
     },
     "updates": {
       "title": "Beginner Guide",
@@ -95,7 +95,7 @@
     "officialDiscord": "Discord",
     "officialYoutube": "YouTube",
     "vvBuilder": "Community Tool",
-    "beginnerGuide": "Check Codes and Updates",
+    "beginnerGuide": "Start Here",
     "raceGuides": "Beginner Guide",
     "bossGuides": "Elite Waves",
     "buildGuide": "Builds",
