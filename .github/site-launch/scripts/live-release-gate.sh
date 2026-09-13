@@ -50,10 +50,10 @@ done
 
 check_200 /favicon.ico
 if [[ -n "${EXPECTED_GA_ID:-}" ]]; then
-  grep -Fq "$EXPECTED_GA_ID" "$TMP/home.html" || { echo "live gate: expected GA4 id missing" >&2; exit 1; }
+  grep -Fq -- "$EXPECTED_GA_ID" "$TMP/home.html" || { echo "live gate: expected GA4 id missing" >&2; exit 1; }
 fi
 if [[ -n "${EXPECTED_GSC_TOKEN:-}" ]]; then
-  grep -Fq "$EXPECTED_GSC_TOKEN" "$TMP/home.html" || { echo "live gate: expected GSC token missing" >&2; exit 1; }
+  grep -Fq -- "$EXPECTED_GSC_TOKEN" "$TMP/home.html" || { echo "live gate: expected GSC token missing" >&2; exit 1; }
 fi
 
 printf '{"live_release_gate":"ok","domain":"%s","innerPath":"%s"}\n' "$DOMAIN" "$INNER_PATH"
