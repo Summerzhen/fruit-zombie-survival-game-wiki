@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta name="robots" content="noindex,nofollow" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    html, body { margin: 0; padding: 0; background: transparent; overflow: hidden; }
+  </style>
+</head>
+<body>
+<script>
+  atOptions = {
+    'key' : 'ea1fdee3d800a76164748510315d60a8',
+    'format' : 'iframe',
+    'height' : 90,
+    'width' : 728,
+    'params' : {}
+  };
+</script>
+<script src="https://www.highrevenueformat.com/ea1fdee3d800a76164748510315d60a8/invoke.js"></script>
+<script>
+  (() => {
+    let reported = false;
+    const reportFill = () => {
+      if (reported || !(([...document.body.querySelectorAll('iframe, object, embed')].some((node) => {
+        const rect = node.getBoundingClientRect();
+        const source = node.getAttribute('src') || '';
+        const width = rect.width || Number(node.getAttribute('width')) || 0;
+        const height = rect.height || Number(node.getAttribute('height')) || 0;
+        return !/cloudflareinsights|translate|extension/i.test(source)
+          && width >= 364
+          && height >= 45;
+      })))) return;
+      reported = true;
+      parent.postMessage({ type: "adsterra-slot-filled", slot: "banner-728x90" }, "*");
+      observer.disconnect();
+    };
+    const observer = new MutationObserver(reportFill);
+    observer.observe(document.body, { childList: true, subtree: true });
+    reportFill();
+  })();
+</script>
+</body>
+</html>

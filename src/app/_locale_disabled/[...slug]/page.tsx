@@ -32,6 +32,7 @@ import {
   localizedUrl,
 } from "@/lib/seo-routes";
 import { GAME_SITE_CONFIG, SITE_URL, absoluteAsset } from "@/config/game-site";
+import { AdSlot, NativeContentAd, SidebarAds } from "@/components/adsterra-ads";
 
 export const dynamicParams = false;
 
@@ -375,6 +376,7 @@ async function DetailPage({
           <div className="prose-invert reading-surface mt-12 max-w-none">
             <item.MDXContent />
           </div>
+          <div data-ad-placement="article-native"><NativeContentAd /></div>
           <ArticleCards
             locale={locale}
             contentType={contentType}
@@ -393,6 +395,7 @@ async function DetailPage({
             navGroups={navGroups}
             currentPath={pathname}
           />
+          <SidebarAds />
         </aside>
       </div>
     </main>

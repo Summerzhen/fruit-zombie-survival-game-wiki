@@ -7,6 +7,7 @@ import { localizeHref } from "@/components/site";
 import { GAME_SITE_CONFIG } from "@/config/game-site";
 import type { ContentItem } from "@/lib/content";
 import en from "@/locales/en.json";
+import { AdSlot, NativeContentAd } from "@/components/adsterra-ads";
 
 type Home = typeof en.home;
 
@@ -32,6 +33,8 @@ export default function HomePageClient({ home, locale, articles }: { home: Home;
 
     {articles.length > 0 && <PageDirectory articles={articles} locale={locale} labels={home.explore} />}
 
+    <div data-ad-placement="home-native"><NativeContentAd /></div>
+
     <section aria-labelledby="implemented-features-title" className="grid gap-4 sm:grid-cols-3" data-primary-action-type="internal-link">
       <h2 id="implemented-features-title" className="sr-only">Fruit Zombie Survival feature routes</h2>
       {implementedFeatures.slice(1).map((feature, index) => {
@@ -51,6 +54,8 @@ export default function HomePageClient({ home, locale, articles }: { home: Home;
     {media.trailerVideoId && <section><iframe title={home.aboutGame.title} src={`https://www.youtube-nocookie.com/embed/${media.trailerVideoId}`} loading="lazy" allowFullScreen className="aspect-video w-full rounded-2xl border border-border" /></section>}
 
     {home.faq.enabled && home.faq.items.length > 0 && <section aria-labelledby="faq-title" className="max-w-4xl"><h2 id="faq-title" className="font-editorial flex items-center gap-3 text-3xl font-semibold"><CircleHelp aria-hidden="true" className="h-7 w-7 text-primary" />{home.faq.title}</h2><Accordion type="single" collapsible className="mt-6 border-t border-border">{home.faq.items.map((item: {question: string; answer: string}, index: number) => <AccordionItem key={index} value={`faq-${index}`}><AccordionTrigger className="text-left">{item.question}</AccordionTrigger><AccordionContent className="leading-7">{item.answer}</AccordionContent></AccordionItem>)}</Accordion></section>}
+    <AdSlot name="banner-728x90" className="mx-auto my-12 hidden md:flex" />
+    <AdSlot name="banner-320x50" className="mx-auto my-12 md:hidden" />
 
     <section className="rounded-2xl border border-border bg-primary/5 p-6 sm:p-10"><h2 className="font-editorial text-3xl font-semibold">{home.finalCta.title}</h2><p className="mt-4 max-w-2xl leading-7 text-muted-foreground">{home.finalCta.description}</p><Button asChild className="mt-6 h-auto min-h-11 whitespace-normal rounded-full px-6 py-3"><Link href={localizeHref(home.finalCta.primaryHref, locale)}>{home.finalCta.primary}<ArrowRight className="ml-3 h-4 w-4 shrink-0" /></Link></Button></section>
   </div>;

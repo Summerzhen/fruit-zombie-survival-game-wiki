@@ -8,6 +8,7 @@ import { languageAlternates } from "@/lib/seo-routes";
 import en from "@/locales/en.json";
 import HomePageClient from "../_locale_disabled/HomePageClient";
 import { GAME_SITE_CONFIG, SITE_URL, absoluteAsset } from "@/config/game-site";
+import { AdSlot, NativeContentAd } from "@/components/adsterra-ads";
 
 type Messages = typeof en;
 

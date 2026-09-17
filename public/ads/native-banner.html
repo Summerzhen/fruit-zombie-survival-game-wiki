@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta name="robots" content="noindex,nofollow" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    html, body { margin: 0; padding: 0; background: transparent; overflow: hidden; }
+  </style>
+</head>
+<body>
+<script async="async" data-cfasync="false" src="https://pl31388093.profitableratecpmnetwork.com/3cce9a5275855f6d1b7bfaf37723558f/invoke.js"></script>
+<div id="container-3cce9a5275855f6d1b7bfaf37723558f"></div>
+<script>
+  (() => {
+    let reported = false;
+    const reportFill = () => {
+      if (reported || !((() => {
+        const container = document.querySelector('[id^="container-"]');
+        return container && [...container.querySelectorAll('iframe, object, embed, img, article, a')].some((node) => {
+          const rect = node.getBoundingClientRect();
+          const source = node.getAttribute('src') || node.getAttribute('href') || '';
+          return !/cloudflareinsights|translate|extension/i.test(source) && rect.width >= 40 && rect.height >= 20;
+        });
+      })())) return;
+      reported = true;
+      parent.postMessage({ type: "adsterra-slot-filled", slot: "native-banner" }, "*");
+      observer.disconnect();
+    };
+    const observer = new MutationObserver(reportFill);
+    observer.observe(document.body, { childList: true, subtree: true });
+    reportFill();
+  })();
+</script>
+</body>
+</html>
