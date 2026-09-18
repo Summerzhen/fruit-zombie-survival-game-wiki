@@ -1,0 +1,7 @@
+{
+  "templatePath": "/root/Documents/同步/游戏站模版",
+  "targetPath": "/root/Documents/同步/fruit-zombie-survival-game.wiki/site",
+  "templateRevision": null,
+  "copiedBy": "site-launch-agent/scripts/copy-template.sh",
+  "note": "Backfilled after the template-contract gate was added; this site predates the mandatory provenance file."
+}

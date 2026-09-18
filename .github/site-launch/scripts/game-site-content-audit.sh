@@ -48,6 +48,7 @@ const extraForbidden = (process.env.GAME_SITE_CONTENT_AUDIT_FORBIDDEN || '')
   .split(',')
   .map((s) => s.trim())
   .filter(Boolean);
+const delayedAdsterra = exists('public/.delayed-adsterra') || exists('.delayed-adsterra');
 
 const sourceRoots = ['src', 'content', 'public/manifest.json', 'public/ads', 'public/ads.txt'];
 const adEnvContractFiles = new Set(['app/adsterra-env-ads.tsx', 'src/components/adsterra-env-ads.tsx', 'src/components/ad-env-ads.tsx']);
@@ -120,6 +121,7 @@ for (const file of allTextFiles) {
   const isAdEnvContract = adEnvContractFiles.has(relativeFile);
   const text = read(file);
   for (const rule of forbidden) {
+    if (delayedAdsterra && rule.kind === 'first_launch_ads') continue;
     if (isAdEnvContract && rule.kind === 'first_launch_ads' && text.includes('NEXT_PUBLIC_AD_')) continue;
     if (rule.kind === 'generic_route_shell' && /\.build\.json$/.test(relativeFile)) continue;
     const match = text.match(rule.pattern);

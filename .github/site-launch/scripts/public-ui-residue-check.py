@@ -76,13 +76,15 @@ def main() -> int:
     site = Path(sys.argv[1]).resolve()
     failures: list[str] = []
     ad_env_contract_files = {rel for rel in AD_ENV_CONTRACT_FILES if (site / rel).is_file()}
-    for rel in FIRST_LAUNCH_AD_FILES:
-        if (site / rel).is_file():
-            failures.append(f"{rel}: first launch must not ship ad files before delayed-adsterra")
-    for rel in FIRST_LAUNCH_AD_DIRS:
-        ad_dir = site / rel
-        if ad_dir.is_dir() and any(path.is_file() for path in ad_dir.rglob("*")):
-            failures.append(f"{rel}: first launch must not ship ad directories before delayed-adsterra")
+    delayed_adsterra = (site / "public/.delayed-adsterra").is_file() or (site / ".delayed-adsterra").is_file()
+    if not delayed_adsterra:
+        for rel in FIRST_LAUNCH_AD_FILES:
+            if (site / rel).is_file():
+                failures.append(f"{rel}: first launch must not ship ad files before delayed-adsterra")
+        for rel in FIRST_LAUNCH_AD_DIRS:
+            ad_dir = site / rel
+            if ad_dir.is_dir() and any(path.is_file() for path in ad_dir.rglob("*")):
+                failures.append(f"{rel}: first launch must not ship ad directories before delayed-adsterra")
     for root_name in PUBLIC_DIRS:
         root = site / root_name
         if not root.exists():
@@ -95,6 +97,8 @@ def main() -> int:
             for pattern, reason in FORBIDDEN_PATTERNS.items():
                 if re.search(pattern, text, flags=re.I):
                     failures.append(f"{rel}: {reason}: /{pattern}/")
+            if delayed_adsterra:
+                continue
             for pattern, reason in AD_PATTERNS.items():
                 if rel in ad_env_contract_files and "NEXT_PUBLIC_AD_" in text:
                     continue

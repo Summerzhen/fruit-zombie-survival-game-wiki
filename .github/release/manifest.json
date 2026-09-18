@@ -1,7 +1,7 @@
 {
   "version": 1,
   "domain": "fruit-zombie-survival-game.wiki",
-  "archiveSha256": "96b7890d8ecc841e5408bea1995768615ce2df35a677cb72b039d79c5e3eceb6",
+  "archiveSha256": "4224f21959ae4828a636247b6228d5ecd26201c49a489b2ccafcfd2ddb8db3d8",
   "files": {
     "audit/content-source/home-source.mdx": "2d1856ceb0b03da48721d9244d0323b15ceb82228b1138e6c0177b20eb631406",
     "audit/delivery-screenshots/15b6835bcea2-1440.png": "cb70ce2c7d300b723899a8e90f0569cf4680f75957e7b069bc9ddd39c2e285c9",
@@ -153,6 +153,7 @@
     "site/audit/screenshots/home-1440.png": "1bc4d7df23db695a11e97e00da404b79c9711746b9898ea5d6bf990d3198f8bf",
     "site/audit/screenshots/home-1920.png": "abfe83a11e5fdc1a3b091568831096263966edaf27c6c22208b9fdba3a1a74df",
     "site/audit/screenshots/home-390.png": "b873b13d54d8260be03ec61deb67f55e5964aabea3aa6ae0e3928f6c7025b54e",
+    "site/audit/template-source.json": "38747c2b90f2bd416a46fccaaae8e39e3f394f4f7c8a4b8e583bb6f2a9f9f5c5",
     "site/audit/visual-qa.json": "e86a752cb33704770d8b1e60be5d659c88c7699955cbd0ad61787fea8f0fbda5",
     "site/biome.json": "a53332721999d92799d091123b01eea97e9702ae73b248886ad6baa6e46c7071",
     "site/bun.lock": "02ff8b7aaeba4b6ccf57f3c418dcaa2a73cbbcab7d4930571ed2288e2b5529fa",
