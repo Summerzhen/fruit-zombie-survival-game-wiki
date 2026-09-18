@@ -59,7 +59,8 @@ const forbidden = [
   { kind: 'wrong_game', pattern: /Jagged Alliance|Terraria|Old One's Army|Old One|Battle Brothers|One Page Rules|Grimdark|Dungeon Defenders|Dark Mage|Betsy|Megashark|Xenopopper|Roblox Studio|LocalScript/i },
   { kind: 'fake_codes', pattern: /PLASMABLAST|GOLDENRPG|HEAVYDEFENSE|Scruffy|244466666|Late Christmas|FULLRELEASE|75KLIKES|Manipulator|Clan Reroll|Ability Reroll|Diamond Shotgun|Diamond Submachine|Rusty Spawner/i },
   { kind: 'legacy_template', pattern: /VV: ULTIMATUM|VV Ultimatum|Shinigami|Quincy|Hollow|hero-trailer-thumbnail|site-icon\.svg|鉁/i },
-  { kind: 'stale_category', pattern: /choose a race|compare skills|locate routes|builds,\s*races|\/guns\b|\/tools\b|(?<!guide)\/beginner-guide\b/i },
+  { kind: 'stale_category', pattern: /choose a race|compare skills|locate routes|builds,\s*races|\/guns\b|\/tools\b/i },
+  { kind: 'generic_route_shell', pattern: /Launch Routes|Route Table|current working frame|official facts and route scope|core system path and jump into the matching guide|Copied template contract for autonomous static launch|<main\s*\/>/i },
   { kind: 'internal_planning_copy', pattern: /\b(?:this|the)\s+(?:site|wiki|page)\s+should\s+(?:treat|track|define|become|serve)\b|\brecords?\s+that\s+will\s+be\s+expanded\b|\bafter\s+(?:direct\s+)?in[- ]game\s+(?:capture|verification|review)\b|\bapproved\s+(?:site\s+)?plan\b|\bpage\s+evidence\s+package\b|(?:^|[\s\"'(])\/?content\/evidence\/[^\s\"')<>]+|(?:[A-Z]:[\\/](?:Users|home)[\\/]|\/(?:home|Users)\/)|^\s*#{1,6}\s*(?:data model|launch use|source trail|evidence[- ]backed facts)\s*$/im },
   { kind: 'first_launch_ads', pattern: /\badsterra\b|adsbygoogle|googlesyndication|doubleclick\.(?:net|com)|highrevenueformat|highperformanceformat|effectivecpmnetwork|profitableratecpm|atOptions|NativeContentAd|StickyTopAd|AdSlot|\/ads\//i },
 ];
@@ -120,6 +121,7 @@ for (const file of allTextFiles) {
   const text = read(file);
   for (const rule of forbidden) {
     if (isAdEnvContract && rule.kind === 'first_launch_ads' && text.includes('NEXT_PUBLIC_AD_')) continue;
+    if (rule.kind === 'generic_route_shell' && /\.build\.json$/.test(relativeFile)) continue;
     const match = text.match(rule.pattern);
     if (match) addError(rule.kind, file, lineOf(text, match.index || 0), match[0]);
   }

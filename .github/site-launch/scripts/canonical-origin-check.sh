@@ -16,19 +16,23 @@ done
 
 check_redirect() {
   local source_url="$1"
-  local expected_url="$2"
-  local result status location attempt
+  shift
+  local result status location attempt expected
   for attempt in 1 2 3 4 5 6; do
     result="$(curl -sS --max-time 30 -o /dev/null -w $'%{http_code}\t%{redirect_url}' "$source_url")"
     status="${result%%$'\t'*}"
     location="${result#*$'\t'}"
-    if [[ "$status" =~ ^(301|308)$ && "$location" == "$expected_url" ]]; then
-      echo "redirect=$source_url status=$status location=$location attempt=$attempt"
-      return 0
+    if [[ "$status" =~ ^(301|307|308)$ ]]; then
+      for expected in "$@"; do
+        if [[ "$location" == "$expected" ]]; then
+          echo "redirect=$source_url status=$status location=$location attempt=$attempt"
+          return 0
+        fi
+      done
     fi
     if (( attempt < 6 )); then sleep 5; fi
   done
-  echo "ERROR: $source_url returned $status -> $location; expected 301/308 -> $expected_url" >&2
+  echo "ERROR: $source_url returned $status -> $location; expected 301/307/308 -> $*" >&2
   return 1
 }
 
@@ -39,9 +43,12 @@ check_redirect "https://www.${DOMAIN}/" "https://${DOMAIN}/"
 for path in "${paths[@]}"; do
   [[ "$path" == "/" ]] && continue
   no_slash="${path%/}"
-  check_redirect "http://${DOMAIN}${no_slash}" "https://${DOMAIN}${path}"
-  check_redirect "http://www.${DOMAIN}${no_slash}" "https://${DOMAIN}${path}"
-  check_redirect "https://www.${DOMAIN}${no_slash}" "https://${DOMAIN}${path}"
+  # Cloudflare's HTTP->HTTPS edge redirect can run before the Worker trailing-slash
+  # redirect, so allow the intermediate HTTPS/no-slash URL while separately checking
+  # that the HTTPS apex URL normalizes to the canonical trailing-slash path.
+  check_redirect "http://${DOMAIN}${no_slash}" "https://${DOMAIN}${path}" "https://${DOMAIN}${no_slash}"
+  check_redirect "http://www.${DOMAIN}${no_slash}" "https://${DOMAIN}${path}" "https://${DOMAIN}${no_slash}"
+  check_redirect "https://www.${DOMAIN}${no_slash}" "https://${DOMAIN}${path}" "https://${DOMAIN}${no_slash}"
   check_redirect "https://${DOMAIN}${no_slash}" "https://${DOMAIN}${path}"
 done
 

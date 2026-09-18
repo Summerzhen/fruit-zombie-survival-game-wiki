@@ -292,6 +292,7 @@ def input_digest(root: Path, page: dict) -> str:
             files.update(p for p in folder.rglob('*') if p.is_file() and not p.is_symlink())
     if site.is_dir():
         files.update(p for p in site.iterdir() if p.is_file() and p.suffix in {'.json', '.js', '.mjs', '.cjs', '.ts', '.yaml', '.yml'})
+    files = {p for p in files if p.name != 'next-env.d.ts'}
     for path in sorted(files):
         hasher.update(path.relative_to(site).as_posix().encode())
         hasher.update(hashlib.sha256(path.read_bytes()).digest())
@@ -369,3 +370,4 @@ def render_errors(root: Path, page: dict) -> list[str]:
         if not valid:
             errors.append(f'{url}: missing/failed/stale {width}px browser observation; run probe-delivery-render.py')
     return errors
+

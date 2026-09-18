@@ -80,6 +80,7 @@ def main() -> int:
     commands.append(("page delivery", [sys.executable, str(SCRIPT_DIR / "check-page-delivery.py"), str(project), "--phase", "release"], None))
 
     python_scripts = [
+        "game-template-contract-check.py",
         "public-ui-residue-check.py",
         "content-contract-check.py",
         "visual-evidence-check.py",

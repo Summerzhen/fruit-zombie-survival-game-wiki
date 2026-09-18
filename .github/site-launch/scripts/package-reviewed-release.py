@@ -13,11 +13,11 @@ import tarfile
 from pathlib import Path, PurePosixPath
 
 SCRIPTS = (
-    'run-launch-gate.py', 'check-page-delivery.py', 'public-ui-residue-check.py',
-    'content-contract-check.py', 'visual-evidence-check.py', 'player-facing-guide-gate.py',
-    'game-site-content-audit.sh', 'visible-qa-check.sh', 'full-seo-audit.sh',
-    'launch-quality-gate.py', 'canonical-origin-check.sh', 'live-release-gate.sh',
-    'package-reviewed-release.py',
+    'run-launch-gate.py', 'check-page-delivery.py', 'game-template-contract-check.py',
+    'public-ui-residue-check.py', 'content-contract-check.py', 'visual-evidence-check.py',
+    'player-facing-guide-gate.py', 'game-site-content-audit.sh', 'visible-qa-check.sh',
+    'full-seo-audit.sh', 'launch-quality-gate.py', 'canonical-origin-check.sh',
+    'live-release-gate.sh', 'package-reviewed-release.py',
 )
 SOURCE_DIRS = ('src', 'content', 'public')
 PROJECT_DIRS = ('requirements', 'content', 'evidence', 'audit', 'keywords')
@@ -65,13 +65,13 @@ def files_under(folder: Path) -> set[Path]:
 def source_files(site: Path) -> set[Path]:
     files = set().union(*(files_under(site / name) for name in SOURCE_DIRS))
     for path in site.iterdir():
+        if path.name == "next-env.d.ts":
+            continue
         if path.is_file() and path.suffix in CONFIG_SUFFIXES and permitted(Path(path.name)):
             if path.is_symlink():
-                raise ValueError(f'Symlink configuration: {path}')
+                raise ValueError(f"Symlink configuration: {path}")
             files.add(path)
     return files
-
-
 def hashes(files: set[Path], root: Path) -> dict[str, str]:
     return {p.relative_to(root).as_posix(): digest(p) for p in sorted(files)}
 
