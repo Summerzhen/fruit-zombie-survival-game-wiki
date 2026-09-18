@@ -10,6 +10,7 @@ import { CONTENT_TYPES, getAllContent } from "@/lib/content";
 import { routing, prefixedLocales } from "@/i18n/routing";
 import type { Locale } from "@/i18n/routing";
 import { GAME_SITE_CONFIG, SITE_URL, absoluteAsset } from "@/config/game-site";
+import { StickyTopAd } from "@/components/adsterra-ads";
 
 const sans = Manrope({ subsets: ["latin"], variable: "--font-sans" });
 const display = Antonio({ subsets: ["latin"], variable: "--font-display", weight: ["600", "700"] });
@@ -57,7 +58,7 @@ export default async function LocaleLayout({ children, params }: { children: Rea
       <body className="min-h-screen bg-background font-sans text-foreground antialiased">
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false}>
         <JsonLd data={organization} />
-        <SiteHeader locale={locale} searchItems={searchItems} />
+        <SiteHeader locale={locale} searchItems={searchItems} /><StickyTopAd />
         {children}
         <SiteFooter locale={locale} />
         </ThemeProvider>

@@ -8,7 +8,7 @@ import { languageAlternates } from "@/lib/seo-routes";
 import en from "@/locales/en.json";
 import HomePageClient from "../_locale_disabled/HomePageClient";
 import { GAME_SITE_CONFIG, SITE_URL, absoluteAsset } from "@/config/game-site";
-import { AdSlot, NativeContentAd } from "@/components/adsterra-ads";
+import { AdSlot, NativeContentAd, StickyTopAd } from "@/components/adsterra-ads";
 
 type Messages = typeof en;
 
@@ -74,7 +74,7 @@ export default async function RootPage() {
     <div className="min-h-screen bg-background font-sans text-foreground antialiased">
       <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false}>
         <JsonLd data={organization} />
-        <SiteHeader locale={locale} searchItems={searchItems} />
+        <SiteHeader locale={locale} searchItems={searchItems} /><StickyTopAd />
         <main className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8 lg:py-10">
           <JsonLd data={webSite} />
           <div className="grid items-start gap-7 xl:grid-cols-[minmax(0,1fr)_232px]">
