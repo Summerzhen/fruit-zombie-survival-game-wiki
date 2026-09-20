@@ -38,6 +38,14 @@ jobs:
           DOMAIN="$(python3 -c 'import json; print(json.load(open(".github/release/manifest.json"))["domain"])')"
           SITE="$RUNNER_TEMP/site-launch-reviewed/site"
           python3 .github/site-launch/scripts/run-launch-gate.py "$SITE" "$DOMAIN" --project-dir "$RUNNER_TEMP/site-launch-reviewed" --phase predeploy --skip-build
+          # Worker imports and the deployment rebuild resolve from the checkout dependencies.
+          ln -s "$GITHUB_WORKSPACE/node_modules" "$SITE/node_modules"
+          (
+            cd "$SITE"
+            NEXT_PUBLIC_GA_MEASUREMENT_ID="$EXPECTED_GA_ID" \
+            NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION="$EXPECTED_GSC_TOKEN" \
+            npm run build
+          )
           python3 - "$SITE/out/index.html" <<'PY'
           import os, pathlib, sys
           html = pathlib.Path(sys.argv[1]).read_text(encoding="utf-8")
@@ -46,8 +54,6 @@ jobs:
               if not value or value not in html:
                   raise SystemExit(f"Reviewed export does not match {key}; rebuild and repeat review")
           PY
-          # Worker imports resolve from the checkout dependencies; static HTML is never rebuilt.
-          ln -s "$GITHUB_WORKSPACE/node_modules" "$SITE/node_modules"
 
       - name: Deploy
         uses: cloudflare/wrangler-action@v3
